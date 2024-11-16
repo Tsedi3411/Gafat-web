@@ -1,0 +1,28 @@
+.card-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    background-image: url('../assets/ssss.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+height: 700px;
+flex-direction: column;
+gap: 100px;  
+}
+.upper-cl{
+    background: rgba(0,128,0,0.9);
+    padding: 20px 60px;
+
+    color: white;
+}
+.loweer-cl .colsr{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+.colsr img{
+    width: 200px;
+    height: 200px;
+}

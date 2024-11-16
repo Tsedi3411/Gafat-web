@@ -1,0 +1,47 @@
+.service {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 650px;
+
+    /* background-color: rgba(1, 1, 1, 0.5); */
+
+}
+
+.service-right h1 {
+    font-weight: bolder;
+    color: rgba(164,136,46,0.7);
+    font-size: xx-large;
+    margin-top: 100px;
+    width: 450px;
+}
+
+.service-right p {
+    width: 450px;
+    color: white;
+    font-size: large;
+    letter-spacing: 1px;
+    /* margin-top: 100px; */
+}
+
+.service-provide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+        url(../assets/serviseP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 650px;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+    height: 650px; 
+}
+.service-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}

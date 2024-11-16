@@ -1,0 +1,77 @@
+.experiance {
+    /* background-color: rgba(164,136,46,0.7); */
+    color: black;
+}
+
+.lower-exp {
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.upper-exp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lower-exp p {
+    display: flex;
+    font-weight: bold;
+    font-size: larger;
+    width: 100px;
+}
+
+.upper-exp h1 {
+    display: flex;
+    padding: 30px;
+    width: 700px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.7);
+    /* background-color:green ; */
+}
+
+.upper-exp p {
+    display: flex;
+    width: 700px;
+    padding: 40px;
+    padding-bottom: 0;
+    color: black;
+    padding-top: 2px;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    font-size: large;
+    font-weight: medium;
+}
+
+.lower-one img {
+    
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform(0.5s);
+}
+
+.lower-one img:hover {
+    transform: rotate(0deg);
+}
+
+.lower-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lower-one p {
+    width: 200px;
+    padding-right: 10px;
+}

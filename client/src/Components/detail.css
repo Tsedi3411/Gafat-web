@@ -1,0 +1,87 @@
+.D-one{
+    display: flex;
+    flex-direction: column;
+}
+.upper-d{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+        url(../assets/serviseP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 650px;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+    height: 450px;
+}
+.upper-d h1{
+     color: white;
+     
+}
+.upper-d a{
+    color: white;
+}
+.nnn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.nnn-l{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: orange;
+  
+}
+.nnn-l a{
+    text-decoration: none;
+    font-size: larger;
+}
+
+.detail-One{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+.detail-One button{
+    margin-top: 20px;
+   margin-bottom: 10px;
+}
+.inside{
+    width: 500px;
+}
+.inside img{
+    width: 500px;
+}
+.blog{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    height: 250px;
+    background-color: rgba(174, 178, 182,0.2);
+    border-radius: 20px;
+    box-shadow: black;
+    
+}
+.blog h3{
+    margin-left: 20px;
+   
+}
+.blog a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgba(0.128,0,0.1);
+}
+.blog a:hover{
+    color: rgb(140, 100, 46);
+    font-size: large;
+}
