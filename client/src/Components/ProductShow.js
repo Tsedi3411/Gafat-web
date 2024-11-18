@@ -60,7 +60,7 @@ const ProductShow = () => {
     },
     {
       id: 4,
-      name: 'Stay informed with the latest news on our innovative HR and security solutions.',
+      name: 'Stay informed with the latest news.',
       img:opal4,
       description: 'Soft sulfate mineral used in construction an mineral used in cement productiond as a fertilizer.',
       btn:'Latest News',

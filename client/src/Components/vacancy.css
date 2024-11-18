@@ -1,9 +1,10 @@
-.vacancy {
+/* .vacancy {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 650px;
     gap: 40px;
+    
 }
 
 .upper-vacancy {
@@ -23,15 +24,16 @@
 .upper-vacancy p {
     font-size: large;
     /* letter-spacing: 2px; */
-}
+/* }
 .lower-vacancy h2{
     color: rgb(112, 46, 18);
-}
+} */
 
-.lower-v {
+/* .lower-v {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    width: 90%;  
 }
 
 .lower-vacancy {
@@ -39,10 +41,64 @@
     border: 1px solid white;
     width: 400px; 
     height: 300px;  
-    background-color: rgb(189, 189, 171);
+    background-color: rgba(164, 136, 46,0.7);
     border-radius: 10px;
     box-shadow:0ex;
+    
 }
 .lower-vacancy p{
     font-weight: bold;
-}
+}  */
+
+/* vacancy.css */
+
+.vacancy-container {
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    flex: 1 1 auto;
+  }
+  
+  .title {
+    margin-bottom: 8px;
+  }
+  
+  .requirements-title {
+    margin-top: 16px;
+  }
+  
+  .requirements-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .requirement-item {
+    margin: 4px 0;
+  }
+  
+  .description {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }

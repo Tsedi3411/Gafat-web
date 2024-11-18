@@ -1,68 +1,116 @@
-import React from 'react'
-import { Card, Row, Col } from 'antd';
-import './vacancy.css'
+
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './about.css'
-import './card.css'
-
-
 import gs from '../assets/police3.jpg'
-import { NavLink } from 'react-router-dom'
 
-function Vacancy() {
-    const vacancies = [
-        {
-            title: 'Security',
-            requirment: '2 years of experiance in security',
-            amount: '10',
-            description: 'We are seeking for experianced Security guard for our company as a night shift for keeping our assets from the uncessasary losses , if you ara passinate about the job please apply to the link below ',
-        },
-        {
-            title: 'Sales',
-            requirment: '1 month of experiance',
-            amount: '2',
-            description: 'We are seeking a dynamic and results-driven Sales Recruiter With a commitment to excellence and a passion for growth, we are looking for talented individuals to join our team.',
-        },
-        {
-            title: 'Software Developer',
-            requirment: '3 years of technical experiance',
-            amount: '4',
-            description: 'who can develop the company website and other applications which are applicable for use With a commitment to excellence and a passion for growth, we are looking for talented individuals to join our team.',
-        },
-    ]
-    return (<>
+const Vacancy = () => {
+  const vacancies = [
+    {
+      title: 'Software Engineer',
+      requirements: [
+        'Bachelor’s degree in Computer Science',
+        '2+ years of experience',
+        'Proficient in JavaScript, React',
+      ],
+      description: 'We are looking for a Software Engineer to join our team.',
+    },
+    {
+      title: 'Product Manager',
+      requirements: [
+        'Bachelor’s degree in Business or related field',
+        '5+ years of product management experience',
+        'Strong analytical and problem-solving skills',
+      ],
+      description: 'Join us as a Product Manager and lead our product initiatives.',
+    },
+    {
+      title: 'UX/UI Designer',
+      requirements: [
+        'Degree in Design or related field',
+        '3+ years of experience in UX/UI design',
+        'Proficient with design tools like Sketch, Figma',
+      ],
+      description: 'Looking for a creative UX/UI Designer to enhance user experience.',
+    },
+  ];
 
-        <div className='news-upper' >
-            <img src={gs} alt='News Image' />
-            <div className='news-la'>
-                <NavLink to='/'>Home </NavLink>
-                <p>/</p>
-                <p>Vacancy</p>
-            </div>
+  const handleApply = () => {
+    alert('You have applied for the position!');
+  };
+
+  return (
+    <>
+     <div className='news-upper' >
+        <img src={gs} alt='News Image' />
+        <div className='news-la'>
+          <NavLink to='/'>Home </NavLink>
+          <p>/</p>
+          <p>Vacancy</p>
         </div>
-        <div className='vacancy'>
-            <div className='upper-vacancy'>
-                <h1>Vacancy</h1>
-                <p>We are a dynamic and innovative organization dedicated to providing exceptional products
-                    and services to our customers. With a commitment to excellence and a passion for growth.</p> 
-            </div> 
-
-            
-             <div className='lower-v'>
-                {vacancies.map((job => (
-                    <div className='lower-vacancy'>
-                        <h2>{job.title}</h2>
-                        <p>Requirment: {job.requirment}</p>
-                        <p>Amount: {job.amount}</p>
-                        <p>Description: {job.description}</p>
-                    </div>
-                )
-                ))}
-            </div> 
-
-
+      </div>
+    <div style={styles.vacancyContainer}>
+      {vacancies.map((vacancy, index) => (
+        <div key={index} style={styles.card}>
+          <h2 style={styles.title}>{vacancy.title}</h2>
+          <h4 style={styles.requirementsTitle}>Requirements:</h4>
+          <ul style={styles.requirementsList}>
+            {vacancy.requirements.map((req, idx) => (
+              <li key={idx} style={styles.requirementItem}>{req}</li>
+            ))}
+          </ul>
+          <p style={styles.description}>{vacancy.description}</p>
+          <button style={styles.button} onClick={handleApply}>
+            Apply Now
+          </button>
         </div>
-    </>)
-}
+      ))}
+    </div>
+    </> );
+};
 
-export default Vacancy
+const styles = {
+  vacancyContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap', // Allows wrapping on smaller screens
+    justifyContent: 'space-around', // Adjusts spacing between cards
+    padding: '16px',
+  },
+  card: {
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    padding: '16px',
+    margin: '16px',
+    maxWidth: '300px', // Adjust max width as necessary
+    backgroundColor: '#f9f9f9',
+    flex: '1 1 auto', // Allows cards to grow and shrink
+  },
+  title: {
+    marginBottom: '8px',
+  },
+  requirementsTitle: {
+    marginTop: '16px',
+  },
+  requirementsList: {
+    listStyleType: 'none',
+    padding: '0',
+  },
+  requirementItem: {
+    margin: '4px 0',
+  },
+  description: {
+    marginTop: '16px',
+    marginBottom: '16px',
+  },
+  button: {
+    padding: '10px 15px',
+    backgroundColor: '#007BFF',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
 
+export default Vacancy;

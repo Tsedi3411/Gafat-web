@@ -144,6 +144,7 @@
     padding: 12px 24px;
     border-radius: 10px;
     border-color: white;
+    width: 150px;
 }
 .lower-news button:hover{
     background-color: orange;  

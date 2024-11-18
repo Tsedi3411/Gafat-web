@@ -23,9 +23,9 @@ function Forign() {
             <div className='news-upper' >
                 <img src={gs} alt='News Image' />
                 <div className='news-la'>
-                    <NavLink to='/about'>News </NavLink>
+                    <NavLink to='/news'>News </NavLink>
                     <p>/</p>
-                    <p>About</p>
+                    <p>Forign Opportunity</p>
                 </div>
             </div>
             <div className='detail-One'>
@@ -33,9 +33,9 @@ function Forign() {
                     <img src={item.image} alt='First Detail Image' />
                     <h1>{item.title}</h1>
                     <p>{item.Description}</p>
-                    <NavLink to={item.link}>
+                    {/* <NavLink to={item.link}>
                         <button> Read More</button>
-                    </NavLink>
+                    </NavLink> */}
                 </div>
                 ))}
                 <div className='blog'>

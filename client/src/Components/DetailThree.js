@@ -6,9 +6,9 @@ function DetailThree() {
   const detailThree=[
     {
       image: im3,
-      title: 'Recruiting to our Partners',
+      title: 'Get An awrd from Federal Mnagment center',
       Description: 'lorem',
-      link:'/news',
+      link:'/news/detailTh',
     }
   ]
   // const { id } = useParams();

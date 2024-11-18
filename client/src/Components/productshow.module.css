@@ -134,10 +134,10 @@
     overflow: hidden;
 }
 .showimg{
-    width: 700px;
+    width: 800px;
     height: 700px;
     object-fit: cover;
-    transition: all .5s;
+    transition: all .3s;
     border-radius:50%;
     transform: translateX(0);
     opacity: 1;
@@ -149,7 +149,7 @@
     height: 700px;
     border-radius:50%;
     object-fit: cover;
-    transition: all .5s;
+    transition: all .3s;
 }
 @media(max-width:800px){
     .contentbox{

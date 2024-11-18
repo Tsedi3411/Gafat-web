@@ -11,7 +11,7 @@ function DetailTwo() {
             image: sg,
             title: 'Recruiting to our partners',
             Description: 'lorem',
-            link: '/news',
+            link: '/news/detailT',
         },
     ]
     const { id } = useParams();
@@ -23,7 +23,7 @@ function DetailTwo() {
                     <div className='nnn-l'>
                         <NavLink to='/news'>News / </NavLink>
                         <NavLink to='/'>Home</NavLink>
-                        <NavLink to='/detailT'> / Forign Opportunity </NavLink>
+                        <NavLink to='news/detailT'> / Recruiting </NavLink>
                     </div>
                 </div>
 

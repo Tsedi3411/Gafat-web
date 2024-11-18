@@ -14,6 +14,7 @@ import Vacancy from "./Components/Vacancy";
 import Forign from "./Components/Forign";
 // import path from "path";
 import Experiance from "./Components/Experiance";
+import Newsdetail from "./Components/Newsdetail";
 
 
 
@@ -31,10 +32,10 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path:'/experiance',
-        element:<Experiance />
+        path: '/experiance',
+        element: <Experiance />
       },
-     
+
       {
         path: "/service",
         element: <Service />,
@@ -54,52 +55,20 @@ const router = createBrowserRouter([
         element: <Partners />,
       },
 
-       {
-              path:'/news',
-              element:<News />
-       },
-
-      // {
-      //   path: "/news/:id",
-      //   element: <News />,
-      //   children: [
-      //     {
-      //       path: 'forign',
-      //       element: <Forign />
-      //     },
-      //     {
-      //       path: 'detailO',
-      //       element: <DetailOne />
-      //     },
-      //     {
-      //       path: 'detailT',
-      //       element: <DetailTwo />
-      //     },
-      //     {
-      //       path: 'detailth',
-      //       element: <DetailThree />
-      //     }
-      //   ]
-      // },
+      {
+        path: '/news',
+        element: <News />
+      },
 
       {
-        path: '/news/:id',
+        path: "/news/detail/:id",
+        element: <Newsdetail />,
+      },
+
+      {
+        path: 'forign',
         element: <Forign />
       },
-
-      {
-        path: '/news/:id',
-        element: <DetailOne />
-      },
-      {
-        path: '/news/:id',
-        element: <DetailTwo />
-      },
-      {
-        path: '/news/:id',
-        element: <DetailThree />
-      },
-
     ],
   },
 ]);

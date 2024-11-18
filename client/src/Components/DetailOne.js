@@ -12,7 +12,7 @@ function DetailOne() {
       image: im1,
       title: 'Give special oportunity to work with forign companies',
       Description: 'lorem',
-      link: '/news',
+      link: '/news/detailO',
     },
   ]
   const { id } = useParams();
@@ -25,7 +25,7 @@ function DetailOne() {
           <div className='nnn-l'>
         <NavLink to='/news'>News / </NavLink>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/DetailO'>Detail</NavLink>
+        <NavLink to='news/detailO'>Detail</NavLink>
         </div>
         </div>
        
