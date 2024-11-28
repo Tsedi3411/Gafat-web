@@ -4,9 +4,10 @@ import './experiance.css'
 import a from '../assets/police2.jpg'
 import b from '../assets/police3.jpg'
 import c from '../assets/plice1.jpg'
+import Chatbot from './Chatbot'
 
 function Experiance() {
-  return (
+  return (<>
     <div className='experiance'>
         <div className='upper-exp'>
           <h1>We have 12 Years of Experience of Security & Human Resource</h1>
@@ -40,7 +41,8 @@ function Experiance() {
              </div>
         </div>
     </div>
-  )
+    <Chatbot />
+    </> )
 }
 
 export default Experiance

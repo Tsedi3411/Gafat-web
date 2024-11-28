@@ -1,57 +1,96 @@
-
-
-.header{
+.header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    background-color: rgb(0,0,0);
-}
-.header img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-.left-header {
-     display: flex;
-     flex-direction: row;
-     gap: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0,128,0,0.7);
 }
 
-.middle-header{
+.left-header img {
+    height: 50px;
+}
+
+.middle-header {
+    position: relative;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; 
+}
+
+.nav-links {
     display: flex;
-    gap: 20px;
+    gap: 20px; 
+   
 }
-
-.middle-header a{
+.nav-links a{
     text-decoration: none;
-    color: rgb(164,136,46);
-    font-weight: bold;
-}
-.middle-header a:active{
-    background-color: orange;
-}
-.middle-header a:hover{
-    text-decoration: underline;
-    color: orange;
-}
-.right-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     color: white;
-    gap: 20px;
-  
+}
+
+.nav-links a:hover{
+    color: rgba(170, 137, 27, 0.9);
+    font-size: large;
+    text-decoration: underline;
 }
 .right-header a{
     text-decoration: none;
-    color: rgb(164,136,46);
+    color: white;
+   
 }
+
 .right-header a:hover{
-    color: orange;
+    color: rgba(164,136,46,0.9);
     font-size: large;
+    text-decoration: underline;
 }
-.right-header input{
-    height: 20px;
-    border-radius: 20px;
+
+.right-header {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute; 
+        /* background-color: white;  */
+        top: 50px; 
+        left: 0;
+        right: 0;
+        border: 1px solid #e0e0e0; 
+        z-index: 1; 
+        color: white;
+        /* width: 100px; */
+        border: none;
+    }
+    a{
+        color: rgba(0,128,0,0.7);
+        width: 100px;
+    }
+    /* .right-header a{
+        color:  rgba(164,136,46,0.9);
+    } */
+
+    .nav-links a{
+        color: rgba(164,136,46,0.9);
+    }
+
+    .nav-links.show {
+        display: flex; 
+    }
+
+    .toggle-icon {
+        display: block;
+    }
+    /* .right-header{
+        display: none;
+    } */
 }

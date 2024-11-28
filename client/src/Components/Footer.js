@@ -11,9 +11,10 @@ import ifive from '../assets/tweet.jpg'
 import isix from '../assets/in.jpg'
 import iseven from '../assets/location.jpg'
 import { Link, NavLink } from 'react-router-dom'
+import Chatbot from './Chatbot'
 
 function Footer() {
-    return (
+    return (<>
         <div className='footer'>
             <div className='upper-footer'>
                 <div className='upf-1'>
@@ -81,7 +82,8 @@ function Footer() {
                   <p>@2024 Allright Reserved By TwoZ Tech</p>
             </div>
         </div>
-    )
+        
+        </>)
 }
 
 export default Footer

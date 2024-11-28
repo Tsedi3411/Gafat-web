@@ -7,6 +7,7 @@ import { FaPeopleRoof } from "react-icons/fa6";
 import { IoIosPeople } from "react-icons/io";
 import { FaGlobe } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
+import ImageSlider from './ImageSlider';
 
 import a from '../assets/abay-bank.jpg'
 import ab from '../assets/Abyssinia-bank.png'
@@ -23,22 +24,39 @@ import './home.css'
 
 import sg from '../assets/police3.jpg'
 import history from '../assets/abtu.jpg'
+import Chatbot from './Chatbot';
 
 function About() {
+  const images = [
+    { url: require('../assets/forOp.jpg'), alt: '', text: 'Welcome to Our Company' },
+    { url: require('../assets/police2.jpg'), alt: '', text: 'we believe in the power of dreams and the relentless pursuit of excellence' },
+    { url: require('../assets/police3.jpg'), alt: '', text: 'Our dedicated team is committed to delivering exceptional quality and service.' },
+    // Add more images as needed
+  ];
 
   const [fade, setFade] = useState(false);
 
   const { id } = useParams();
+
+
   return (
     <>
-      <div className='news-upper' >
+
+    
+
+      <ImageSlider images={images} >
+       
+      </ImageSlider>
+
+
+      {/* <div className='news-upper' >
         <img src={sg} alt='News Image' />
         <div className='news-la'>
           <NavLink to='/'>Home </NavLink>
           <p>/</p>
           <p>About</p>
         </div>
-      </div>
+      </div> */}
       <div className='history'>
 
         <img src={history} alt='photo of our employee' className={`fade-image ${fade ? 'fade-out' : 'fade-in'}`}
@@ -112,7 +130,7 @@ function About() {
       <div className='our-value'>
         <h1>Our Values</h1>
         <p>Peace of mind produces right values, right values produce right thoughts.
-        Right thoughts produce right actions.</p>
+          Right thoughts produce right actions.</p>
         <div className='home-images'>
           <div className='h1'> <FaPeopleRoof size={60} />
             <h2>Team Work</h2>
@@ -131,18 +149,23 @@ function About() {
 
       <div className='up-partner'>
         <h1>Our Partner</h1>
-      <div className='our-partnr'>
-        <img src={a} alt='' className='part-nr' />
-        <img src={ab} alt='' className=' part-nr' />
-        <img src={an} alt='' className='part-nr' />
-        <img src={b} alt='' className='part-nr' />
-        <img src={bu} alt='' className='part-nr' />
-        <img src={e} alt='' className='part-nr' />
-        <img src={k} alt='' className='part-nr' />
-        <img src={o} alt='' className='part-nr' />
-        <img src={t} alt='' className='part-nr' />
+        <div className='our-partnr'>
+          <img src={a} alt='' className='part-nr' />
+          <img src={ab} alt='' className=' part-nr' />
+          <img src={an} alt='' className='part-nr' />
+          <img src={b} alt='' className='part-nr' />
+          <img src={bu} alt='' className='part-nr' />
+          <img src={e} alt='' className='part-nr' />
+          <img src={k} alt='' className='part-nr' />
+          <img src={o} alt='' className='part-nr' />
+          <img src={t} alt='' className='part-nr' />
+        </div>
       </div>
+      <div className='join-us'>
+        <p> Join us on this exciting journey where you’ll have the opportunity to shape workplace cultures, drive talent development, and help individuals thrive in their careers.</p>
+
       </div>
+      <Chatbot />
     </>)
 }
 

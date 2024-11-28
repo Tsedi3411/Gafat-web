@@ -77,17 +77,17 @@ const Countable = () => {
         Icon={BiAbacus} 
       />
       <ScrollAmount 
-        targetValue={54} 
+        targetValue={100} 
         description="Our Partners" 
         Icon={ BsBank} 
       />
       <ScrollAmount 
-        targetValue={4169} 
+        targetValue={10000} 
         description="Our Employees" 
         Icon={BiUserCheck} 
       />
       <ScrollAmount 
-        targetValue={22} 
+        targetValue={102} 
         description="Our Staffs" 
         Icon={BsFillBarChartLineFill} 
       />

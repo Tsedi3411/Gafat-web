@@ -14,10 +14,13 @@ function Forign() {
             image: sg,
             title: 'Forign Oportunity',
             Description: 'lorem',
-            link: '/news/forign',
+            link: '/forign',
         },
     ]
-    const { id } = useParams();
+    
+    
+
+
     return (
         <div className='D-one'>
             <div className='news-upper' >
@@ -33,18 +36,22 @@ function Forign() {
                     <img src={item.image} alt='First Detail Image' />
                     <h1>{item.title}</h1>
                     <p>{item.Description}</p>
-                    {/* <NavLink to={item.link}>
+                    <NavLink to={item.link}>
                         <button> Read More</button>
-                    </NavLink> */}
+                    </NavLink>
                 </div>
                 ))}
-                <div className='blog'>
-                    <h3>Blog Categories</h3>
-                    <NavLink to='cleaning'>Gafat Cleaning</NavLink>
-                    <NavLink to='cleaning'>Gafat Training</NavLink>
-                    <NavLink to='cleaning'>Gafat HR</NavLink>
-                    <NavLink to='cleaning'>Gafat Security</NavLink>
-                </div>
+
+
+               
+                     <div className='blog'>
+                     <h3>Blog Categories</h3>
+                     <NavLink to='cleaning'>Gafat Cleaning</NavLink>
+                     <NavLink to='cleaning'>Gafat Training</NavLink>
+                     <NavLink to='cleaning'>Gafat HR</NavLink>
+                     <NavLink to='cleaning'>Gafat Security</NavLink>
+                 </div>
+              
             </div>
         </div>
     )

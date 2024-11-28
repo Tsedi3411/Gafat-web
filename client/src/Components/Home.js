@@ -1,16 +1,20 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect, useRef, useState } from 'react'
+// import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import { Card, Slider } from 'antd';
+// import { Card, Slider } from 'antd';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import sg from '../assets/forOp.jpg'
+// import {NewsContext} from '../App'
+
 
 import { FaPeopleRoof } from "react-icons/fa6";
 import { IoIosPeople } from "react-icons/io";
 import { FaGlobe } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
+
+
 
 import './home.css'
 import './about.css'
@@ -29,47 +33,56 @@ import ProductShow from './ProductShow';
 
 import CardList from './Card';
 import { NavLink } from 'react-router-dom';
-import ImageSlider from './Hnews';
+// import ImageSlider from './Hnews';
 import Countable from './Countable';
+import Chatbot from './Chatbot';
 
 
 
 function Home() {
+  // const {latestNews, setLatestNews} = useContext(NewsContext)
 
-  // const latestNews=[
-  //   {
-  //     id:1,
-  //     Image:sg,
-  //     title:'Title One',
-  //     descriptions:' About Title one',
-  //     btn:'Read More',
-  //     link:'/',
-  //   },
-  //   {
-  //     id:1,
-  //     Image:sg,
-  //     title:'Title Two',
-  //     descriptions:' About Title one',
-  //     btn:'Read More',
-  //     link:'/',
-  //   },
-  //   {
-  //     id:1,
-  //     Image:sg,
-  //     title:'Title Three',
-  //     descriptions:' About Title one',
-  //     btn:'Read More',
-  //     link:'/',
-  //   },
-  // ]
- 
+
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing after it becomes visible
+        }
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.1, // Trigger when 10% of the component is visible
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+
+
   return (<>
+
+
+
 
     <ProductShow />
     <Countable />
 
     <div className='home'>
-      <h1>We have 12 Years of Experience of Security & Human Resource</h1>
+      <h1>We have 14 Years of Experience of Security & Human Resource</h1>
       <p>Gafat Security and Human Resources P.L.C established on December 10, 2011.Gafat Security and Human Resource Services is
         an organization set up to serve the country, its citizens and its customers by filling in the gaps in the security services
         sector in our country. It is a company that has been established by the country's legal experts and has complied with all legal
@@ -94,24 +107,27 @@ function Home() {
         </div>
       </div>
     </div>
-    {/* <ImageSlider/> */}
-    <CardList />
 
-      
+    <CardList />
 
     <div className='latest-news' >
       <h1>Latest News</h1>
       <div className='upper-news'>
         <img src={sg} alt='News Image' />
         <div className='lower-news'>
-         <h3>Forign Opportunity</h3>
+          <h3>Forign Opportunity</h3>
           <p>Developing programs to support employees relocating for international roles.</p>
-          <NavLink to='/news/forign'><button>Read More</button></NavLink> 
-        </div>  
-      </div> 
+          <NavLink to='/news/detail/4'><button>Read More</button></NavLink>
+        </div>
+      </div>
+    </div>
+    <div className='last-vacancy'>
+      <h3>Latest Vacancies</h3>
+      <p>Currently we have around <button className='btn1'>5</button>jobsAvailable on different position</p>
+      <NavLink to='/vacancy' > <button className='btn2'>VIEW MORE JOBS AND APPLY</button></NavLink>
     </div>
     <div className='up-partner'>
-        <h1>Our Partner</h1>
+      <h1>Our Partner</h1>
       <div className='our-partnr'>
         <img src={a} alt='' className='part-nr' />
         <img src={ab} alt='' className='part-nr' />
@@ -123,7 +139,51 @@ function Home() {
         <img src={o} alt='' className='part-nr' />
         <img src={t} alt='' className='part-nr' />
       </div>
+    </div>
+
+    <div className={`vision-reality ${isVisible ? 'animated' : ''}`} ref={ref}>
+      <h3>Lets Turn Your Vision into Reality: Contact Gafat Today </h3>
+      <p>Believe in your potential and embrace the challenges that come your way, for every obstacle is an opportunity for growth.</p>
+      <div className='upper v-r'>
+        <div className='uppp-ott'>
+          <h2>Get Employee Managment</h2>
+          <p>Say goodbye to paperwork and hello to efficiency!</p>
+        </div>
+        <div className='uppp-ott'>
+          <h2>Effortless Payroll and Compensation</h2>
+          <p>Experience peace of mind with automated payroll processing</p>
+        </div>
+        <div className='uppp-ott'>
+          <h2>Dynamic Performance Management</h2>
+          <p>Transform your performance reviews into a continuous conversation!</p>
+        </div>
+
       </div>
+      <div className='middle-v-r'>
+        <p>Ready to transform your HR processes and empower your team</p>
+        <div className='mddd-1'>
+          <div className='mdd1'>
+            <button><i class="fas fa-phone-alt phone-icon"></i>0913152743</button>
+            <button><i class="fas fa-phone-alt phone-icon"></i>0118682211</button>
+          </div>
+          <div className='mddd1'>
+            <button>info@gafatsecurity.com</button>
+            <button>gafatsecure@gmail.com </button>
+          </div>
+        </div>
+      </div>
+      <div className='bottom v-r'>
+        <div className='bttt-1'>
+          <h2> Join our dynamic team </h2>
+          <p>be part of a company that values innovation, collaboration, and growth</p>
+        </div>
+        <div className='bttt-1'>
+          <h2>Don’t wait any longer</h2>
+          <p>Contact us today to learn how our innovative HR system can make a difference for your organization.</p>
+        </div>
+      </div>
+    </div>
+    <Chatbot />
   </>)
 }
 

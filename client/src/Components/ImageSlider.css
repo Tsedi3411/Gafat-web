@@ -1,29 +1,163 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%; 
+  margin: auto;
+  overflow: hidden;
+ 
+}
+
 .slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 600px;
-    margin: auto;
-  }
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+  z-index: 1;
   
-  .slider-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-  }
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5); 
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  opacity: 0; 
+  transition: opacity 0.5s ease; 
   
-  .slider-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 10px;
-    transition: background-color 0.3s;
+}
+
+.fadeIn {
+  opacity: 1; 
+}
+
+.button-container {
+  position: absolute;
+  top: 80%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  display: flex; 
+  gap: 10px; 
+}
+
+.slider-button {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid rgba(0, 128, 0, 0.7);
+  padding: 10px 20px; 
+  font-size: 1rem;
+  color: rgba(0, 128, 0, 0.7);
+  cursor: pointer;
+  border-radius: 40px; 
+  transition: background-color 0.3s, transform 0.3s;
+  opacity: 0; 
+  animation: fadeInButton 3s forwards; /* Apply button fade-in animation */
+  width: 200px;
+}
+
+@keyframes fadeInButton {
+  from {
+      opacity: 0;
+      transform: translateY(20px); 
   }
-  
-  .slider-button:hover {
-    background-color: #0056b3;
+  to {
+      opacity: 1; 
+      transform: translateY(0);
   }
+}
+
+.slider-button:hover {
+  background-color: rgba(255, 255, 255, 1); 
+  transform: scale(1.05); 
+  background-color: rgba(0, 128, 0, 0.7);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from{
+      opacity: 0;
+      transform: translateY(10px); 
+  }
+  to {
+      opacity: 1; 
+      transform: translateY(40%);
+  }
+}
+
+.slider-button.left, .slider-button.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 128, 0, 0.7);
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  z-index: 1;
+  width: 0px;
+  width: 50px;
+}
+.slider-button.left:hover, .slider-button.right:hover{
+  background: rgba(255, 255, 255, 0.7);
+ 
+  color: rgba(0, 128, 0, 0.7);
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.fadeIn {
+  opacity: 1; 
+  /* position: relative; */
+  animation: fadeInAnimation;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes fadeInAnimation {
+  0% {
+    top: -400px;
+  } 
+
+  100% {
+    top: 400px;
+  }
+}
+

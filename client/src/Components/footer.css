@@ -139,6 +139,7 @@ textarea {
 
 .upf-114 input {
     border: none;
+    margin-top: 6px;
     border-radius: 20px;
 }
 
@@ -173,7 +174,6 @@ textarea {
 .footer-icons .navlink img {
     border-radius: 50%;
     transition: transform 0.3s;
-
 }
 
 .footer-icons .navlink:hover {
@@ -182,4 +182,76 @@ textarea {
 
 .upf-14 h2 {
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .middle-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .middle-footer button {
+        /* width: 100%;  */
+        /* margin: 5px 0;  */
+    }
+    .middle-footer {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .footer-icons {
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .footer-icons a {
+        width: 30px;
+        height: 30px; 
+    }
+
+    .upf-1 {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .upf-1 img {
+        width: 120px; 
+        height: 120px; 
+    }
+
+    .upf-1 p {
+        width: auto;
+        font-size: 14px; 
+    }
+
+    .upf-13 {
+        width: 90%; 
+    }
+
+    .footer-icons {
+        justify-content: center; 
+        gap: 15px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .middle-footer button {
+        display: flex;
+        flex-direction: row;
+        /* padding: 10px;  */
+    }
+
+    .upf-14 {
+        flex-direction: column; 
+        align-items: center; 
+        width: 10px;
+    }
+
+    .upf-14 h2 {
+        font-size: 16px; 
+    }
 }

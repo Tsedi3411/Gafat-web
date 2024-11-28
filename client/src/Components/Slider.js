@@ -12,7 +12,6 @@ const images = [
         image2:im22,
         image3:im33,
     }    
-  
 ];
 
 const Slider = () => {

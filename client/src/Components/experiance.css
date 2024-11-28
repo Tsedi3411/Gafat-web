@@ -8,7 +8,8 @@
     height: 300px;
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 100px;
+    
 }
 
 .upper-exp {
@@ -16,7 +17,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .lower-exp p {
@@ -74,4 +74,66 @@
 .lower-one p {
     width: 200px;
     padding-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .lower-exp {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        padding: 20px; 
+        margin: 250px;
+        color: rgba(0, 128, 0, 0.7);
+    }
+
+    .upper-exp h1 {
+        font-size: 24px; 
+        padding: 20px; 
+        max-width: 90%; 
+    }
+
+    .upper-exp p {
+        font-size: 16px;
+        padding: 10px;
+        max-width: 90%; 
+    }
+
+    .lower-one img {
+        height: 120px;
+    }
+
+    .lower-one p {
+        width: auto;
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .lower-exp {
+        padding: 10px; 
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .upper-exp h1 {
+        font-size: 20px; 
+        padding: 15px;
+    }
+
+    .upper-exp p {
+        font-size: 14px; 
+        padding: 5px;
+    }
+
+    .lower-one {
+        flex-direction: row;
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    .lower-one img {
+        width: 100px; 
+        height: 100px; 
+    }
 }

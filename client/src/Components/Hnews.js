@@ -59,7 +59,7 @@ const slides = [
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    // style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
+                    
                   />
                   <h3>{slide.title}</h3>
                   <p>{slide.description}</p>

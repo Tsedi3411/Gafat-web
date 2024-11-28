@@ -1,0 +1,134 @@
+.TNews{
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    justify-content: center;
+    /* align-items: center; */
+}
+.blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+    margin-left: 0px;
+}
+.newsD {
+    align-items: center;
+    max-width: 800px; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    margin-right: 10px;
+  }
+  
+  .newsD img {
+    width: 100%;
+    height: auto; 
+    border-radius: 8px;
+  }
+  
+  
+  .newsD h1 {
+    font-size: 2em; 
+    margin: 20px 0; 
+  }
+  
+ 
+  .newsD p {
+    font-size: 1.2em; 
+    line-height: 1.5; 
+    color: #333; 
+  }
+  
+  .newsD a {
+    display: inline-block; 
+    margin-top: 20px;
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .newsD a:hover {
+    background-color: #0056b3; 
+  }
+
+
+  .TNews {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .newsD {
+    flex: 3; 
+    padding: 20px;
+  }
+  
+  .minimized-news {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-left: 1px solid #ccc; 
+  }
+  
+  .neews {
+    margin-bottom: 15px;
+  }
+  
+  .neews.minimized {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    /* align-items: center; */
+  }
+  
+  .neews.minimized img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; 
+  }
+  
+  .neews.minimized h3 {
+    font-size: 1em; 
+    width: 250px;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .TNews {
+        flex-direction: column; 
+        padding: 20px; 
+    }
+
+    .newsD {
+        margin-right: 0; 
+        margin-bottom: 20px;
+    }
+
+    .minimized-news {
+        border-left: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .newsD h1 {
+        font-size: 1.5em; 
+    }
+
+    .newsD p {
+        font-size: 1em; 
+    }
+
+    .neews.minimized h3 {
+        font-size: 0.9em; 
+    }
+
+    .newsD a {
+        padding: 8px 16px; 
+    }
+}
+ 

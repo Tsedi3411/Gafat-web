@@ -2,34 +2,62 @@ import React from 'react'
 import './contact.css'
 import './about.css'
 import gs from '../assets/police3.jpg'
+import ImageSlider from './ImageSlider';
+import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome
 
 
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import MapComponent from './MapComponenet'
 import ContactForm from './ContactForm'
+import Chatbot from './Chatbot';
 
 function Contact() {
-    return (<>
-    <div className='news-upper' >
-        <img src={gs} alt='News Image' />
-        <div className='news-la'>
-          <NavLink to='/'>Home </NavLink>
-          <p>/</p>
-          <p>Contuct Us</p>
-        </div>
+  const images = [
+    { url: require('../assets/forOp.jpg'), alt: '', text: 'Welcome to Our Company' },
+    { url: require('../assets/police2.jpg'), alt: '', text: 'Come and grow together' },
+    { url: require('../assets/police3.jpg'), alt: '', text: 'Trust Our Partnership' },
+    // Add more images as needed
+  ];
+  return (<>
+
+    <ImageSlider images={images} />
+
+    <div className='contactss'>
+      <div className='cont-upper'>
+        <i className="fa fa-map-marker"></i>
+        <h3>ADDRESS</h3>
+        <ol>
+          <li>Ethiopia, Addis Ababa, Kirkos Sub-City, Woreda 4, House No. 374</li>
+        </ol>
       </div>
-        {/* <div className='contact'>
-          <MapComponent/>
-            <form action='' method=''>
-                <input type='text' placeholder='Your Name' />
-                <input type='text' placeholder='Your Email' />
-                <input type='text' placeholder='Your Phone' />
-                <textarea cols={3} rows={10}> Your Message </textarea>
-                <NavLink to='/'><button>Send Message</button></NavLink>     
-            </form>
-        </div> */}
-        <ContactForm />
-        </> )
+      <div className='cont-upper'>
+        <i className="fa fa-phone"></i>
+        <h3>FOR SHARE INFORMATION</h3>
+        <ul>
+          <li><Link to='+251-927-889-723'>+251-913-152-743</Link></li>
+          <li><Link to='+251-961-749-765'>+251-913-152-743</Link></li>
+          <li><Link to='+251-934-329-193'>+251-913-152-743</Link></li>
+        </ul>
+        <h3>FOR General INFORMATION</h3>
+        <ul>
+          <li><Link to='+251-921-229-726'>+251-911-997-390</Link></li>
+          <li><Link to='+251-933-999-325'>+251-912-642-890</Link></li>
+          <li><Link to='+251-988-219-013'>+251-118-682-211</Link></li>
+        </ul>
+      </div>
+      <div className=' cont-upper'>
+        <i className="fa fa-envelope"></i>
+        <h3>EMAIL</h3>
+        <ul>
+          <li><p>Managment</p>:<Link to='abebe@gmail.com'>gafatsecure@gmail.com</Link></li>
+          <li><p>Sales</p>:<Link to='alemu@gmail.com'>alemu@gmail.com</Link></li>
+          <li><p>Support</p>:<Link to='kidan@gmail.com'>kidan@gmail.com</Link></li>
+        </ul>
+      </div>
+    </div>
+    <ContactForm />
+    <Chatbot />
+  </>)
 }
 
 export default Contact

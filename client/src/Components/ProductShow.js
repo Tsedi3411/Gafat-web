@@ -5,6 +5,7 @@ import opal2 from "../assets/home1.jpg";
 import opal3 from "../assets/service.jpg";
 import opal4 from "../assets/news.jpg";
 import opal5 from '../assets/contact.jpg';
+import './about.css'
 
 import { NavLink } from "react-router-dom";
 
@@ -85,6 +86,7 @@ const ProductShow = () => {
 ]
   return (
     <div className={styles.box}>
+      <h2>Welcome to Gafat Secure Hr</h2>
       <div className={styles.cont}>
       <div className={styles.slider}>
         <div className={styles.lines}>{products.map(l=><span key={l.id} style={{background:selectedItem >= l.id?'rgb(164,136,46)':'transparent'}} className={styles.line}></span>)}</div>

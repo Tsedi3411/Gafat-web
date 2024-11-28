@@ -5,16 +5,15 @@ import Partners from "./Components/Partners";
 import News from "./Components/News";
 import About from "./Components/About";
 import Service from "./Components/Service";
-// import path from "path";
-import DetailOne from "./Components/DetailOne";
-import DetailTwo from "./Components/DetailTwo";
-import DetailThree from "./Components/DetailThree";
 import Contact from "./Components/Contact";
 import Vacancy from "./Components/Vacancy";
 import Forign from "./Components/Forign";
-// import path from "path";
+
 import Experiance from "./Components/Experiance";
 import Newsdetail from "./Components/Newsdetail";
+import NewsBlog from "./Components/NewsBlog";
+import Blog from "./Components/BlogDetail";
+import Vac from "./Components/Vac";
 
 
 
@@ -46,8 +45,16 @@ const router = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: '/vacancy',
+        path: '/vacancy/detail/:id',
         element: <Vacancy />
+      },
+      {
+        path:'/Vacancy',
+        element:<Vac />
+      },
+      {
+        path: '/forign',
+        element: <Forign />
       },
 
       {
@@ -64,11 +71,18 @@ const router = createBrowserRouter([
         path: "/news/detail/:id",
         element: <Newsdetail />,
       },
-
       {
-        path: 'forign',
-        element: <Forign />
+         path:'/newsBlog',
+         element:<NewsBlog />
       },
+      {
+        path: "/newsblog/detail:id",
+        element: <Blog />
+      },
+      // {
+      //   path:"detail/blog:id",
+      //   element:<NewsBlog />
+      // }
     ],
   },
 ]);
