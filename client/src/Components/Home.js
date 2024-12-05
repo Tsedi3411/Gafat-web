@@ -1,12 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Autoplay } from 'swiper';
-import 'swiper/swiper-bundle.css';
-// import { Card, Slider } from 'antd';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import sg from '../assets/forOp.jpg'
-// import {NewsContext} from '../App'
+import { FaPhone } from 'react-icons/fa'; 
+import { FaEnvelope } from 'react-icons/fa';
 
 
 import { FaPeopleRoof } from "react-icons/fa6";
@@ -141,7 +138,7 @@ function Home() {
       </div>
     </div>
 
-    <div className={`vision-reality ${isVisible ? 'animated' : ''}`} ref={ref}>
+    {/* <div className={`vision-reality ${isVisible ? 'animated' : ''}`} ref={ref}>
       <h3>Lets Turn Your Vision into Reality: Contact Gafat Today </h3>
       <p>Believe in your potential and embrace the challenges that come your way, for every obstacle is an opportunity for growth.</p>
       <div className='upper v-r'>
@@ -163,12 +160,12 @@ function Home() {
         <p>Ready to transform your HR processes and empower your team</p>
         <div className='mddd-1'>
           <div className='mdd1'>
-            <button><i class="fas fa-phone-alt phone-icon"></i>0913152743</button>
-            <button><i class="fas fa-phone-alt phone-icon"></i>0118682211</button>
+            <button> <FaPhone size={10} color="white" style={{ margin: '0 20px'}} />0913152743</button>
+            <button><FaPhone size={10} color="white" style={{ margin: '0 20px' }} />0118682211</button>
           </div>
           <div className='mddd1'>
-            <button>info@gafatsecurity.com</button>
-            <button>gafatsecure@gmail.com </button>
+          <button> <FaEnvelope size={10} color="white" style={{ margin: '0 20px' }} />info@gafatsecurity.com</button>
+            <button>  <FaEnvelope size={10} color="white" style={{ margin: '0 20px' }} />gafatsecure@gmail.com </button>
           </div>
         </div>
       </div>
@@ -182,7 +179,7 @@ function Home() {
           <p>Contact us today to learn how our innovative HR system can make a difference for your organization.</p>
         </div>
       </div>
-    </div>
+    </div> */}
     <Chatbot />
   </>)
 }

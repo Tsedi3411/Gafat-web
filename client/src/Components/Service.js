@@ -4,11 +4,13 @@ import './about.css'
 import ImageSlider from './ImageSlider';
 
 
-import sg from '../assets/police3.jpg'
+
 import Provide from './Provide '
-import { NavLink } from 'react-router-dom'
+
 import Experiance from './Experiance'
 import Chatbot from './Chatbot';
+import MySwiper from './Swip';
+import Header from './Header';
 
 
 function Service() {
@@ -20,8 +22,7 @@ function Service() {
     // Add more images as needed
   ];
   return (<>
-   
-    <ImageSlider images={images} />
+   <MySwiper />
     <Provide />
     <Experiance />
     <Chatbot />

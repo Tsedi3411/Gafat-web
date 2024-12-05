@@ -1,8 +1,6 @@
 import React from 'react'
 import './contact.css'
 import './about.css'
-import gs from '../assets/police3.jpg'
-import ImageSlider from './ImageSlider';
 import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome
 
 
@@ -10,6 +8,8 @@ import { Link, NavLink } from 'react-router-dom'
 import MapComponent from './MapComponenet'
 import ContactForm from './ContactForm'
 import Chatbot from './Chatbot';
+import LocationMap from './LocationMap';
+import MySwiper from './Swip';
 
 function Contact() {
   const images = [
@@ -20,7 +20,7 @@ function Contact() {
   ];
   return (<>
 
-    <ImageSlider images={images} />
+    <MySwiper />
 
     <div className='contactss'>
       <div className='cont-upper'>
@@ -56,6 +56,7 @@ function Contact() {
       </div>
     </div>
     <ContactForm />
+    <LocationMap />
     <Chatbot />
   </>)
 }

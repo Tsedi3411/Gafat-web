@@ -34,6 +34,25 @@
     color: white;
 }
 
+@keyframes appear {
+    from{
+       opacity:0;
+       transform: scale(0.2) translateY(20px);
+    }
+    to{
+       opacity: 1;
+       transform: scale(1) translateY(0);
+    }
+    
+}
+.colsr, .upper-cl{
+   animation: appear 5s linear;
+   animation-timeline:view();
+   animation-range: entry 0%;
+   animation-fill-mode: forwards; 
+}
+
+
 @media (max-width: 768px) {
     .card-list {
         height: auto;

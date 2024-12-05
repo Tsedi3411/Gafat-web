@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Row, Col } from 'antd';
+import { Card, Row, Col, Button } from 'antd';
 import './card.css'
 
 import image1 from '../assets/police2.jpg'
@@ -7,30 +7,39 @@ import image2 from '../assets/police3.jpg'
 import image3 from '../assets/training.jpg'
 import image4 from '../assets/cS.jpg'
 
+
 const { Meta } = Card;
 function CardList() {
+ 
+
   const slides = [
     {
+      id:1,
       image: image1,
       title: 'Security Service',
       description: 'Trained security guards monitor premises, control access, and respond to incidents.',
     },
     {
+      id:2,
       image: image2,
       title: 'Human Resources Service',
       description: 'Establishing systems for evaluating employee performance, including feedback.',
     },
     {
+      id:3,
       image: image3,
       title: 'Training & Consultancy HR & Security Service',
       description: 'Providing personal protection for individuals at risk due to their occupation or public profile.',
     },
     {
+      id:4,
       image: image4,
       title: 'Cleaning Service',
       description: ': Routine cleaning tasks such as dusting, vacuuming, mopping, and bathroom sanitation.',
+     
     },
   ];
+
   return (
     <div className='card-list'>
       <div className='upper-cl'>
@@ -46,6 +55,7 @@ function CardList() {
                 cover={<img alt={card.title} src={card.image} />}
               >
                 <Meta title={card.title} description={card.description} />
+                {/* <NavLink to='/servicedetail/:id'><Button>Read More</Button></NavLink> */}
               </Card>
             </Col>
           </div>))}

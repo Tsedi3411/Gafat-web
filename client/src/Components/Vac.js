@@ -6,13 +6,15 @@ import './news.css'
 import Background from './Background';
 import ImageSlider from './ImageSlider';
 import Chatbot from './Chatbot';
+import MySwiper from './Swip';
+
 
 function Vac() {
   const vacancies = [
     {
       id: 1,
-      branch: 'New York',
-      department: 'Engineering',
+      branch:'New York',
+      department:'Engineering',
       position: 'Software Engineer',
       title: 'Senior Software Engineer',
       vacancyType: 'Full-time',
@@ -94,10 +96,8 @@ function Vac() {
     // Add more images as needed
   ];
 
-  return (<>
-
-    <ImageSlider images={images} />
-
+  return (<> 
+ <MySwiper />
     <div className='Vac'>
       <div className='filter-container'>
         <select value={selectedPosition} onChange={(e) => setSelectedPosition(e.target.value)}>
@@ -122,10 +122,10 @@ function Vac() {
         </select>
       </div>
 
-      <div className='minimized-news'>
+      <div className='minimized-vac'>
         <h2>Latest Vacancies</h2>
         {filteredVacancies.map((item) => (
-          <div className='neews minimized' key={item.id}>
+          <div className='vac minimized' key={item.id}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <NavLink to={item.link}>

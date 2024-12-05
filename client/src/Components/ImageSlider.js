@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ImageSlider.css'; // Ensure this path is correct
+import { NavLink } from 'react-router-dom';
 
 const ImageSlider = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,18 +28,19 @@ const ImageSlider = ({ images }) => {
 
     return (
         <div className="slider-container">
-            <div className="slider">
-                <img 
-                    src={images[currentIndex].url} 
-                    alt={images[currentIndex].alt} 
+            <div className="slider" >
+                <img
+                    src={images[currentIndex].url}
+                    alt={images[currentIndex].alt}
                     className={`slider-image ${animate ? 'fadeIn' : 'fadeOut'}`}
+
                 />
                 <div className={`slider-text ${animate ? 'fadeIn' : ''}`}>
                     <h2>{images[currentIndex].text}</h2>
                 </div>
                 <div className="button-container">
-                    <button className="slider-button button1">Empower  </button>
-                    <button className="slider-button button2">get Started</button>
+
+                    <NavLink to='/'>Home</NavLink>
                 </div>
             </div>
             <button className="slider-button left" onClick={() => {

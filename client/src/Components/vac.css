@@ -25,9 +25,8 @@ select:focus {
     outline: none;
 }
 
-.minimized-news {
+.minimized-vac {
     background-color: #f9f9f9;
-    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 900px;
@@ -60,23 +59,52 @@ select:focus {
     background-color: #0056b3;
     transform: scale(1.05);
 }
-.neews.minimized{
+.vac.minimized{
    display: flex;
    flex-direction: row;
    gap: 20px;
 }
-.neews-minimized button{
+.vac.minimized button{
     margin-top: 20px;
     width: 150px;
 }
 
-.neews.minimized h3{
+.vac.minimized h3{
    color: rgba(0,128,0,0.7);
-   /* margin-right: 30px; */
    margin-top: 10px;
-   /* width: 300px; */
+   width: 250px;
 }
-.neews.minimized p{
-    margin-top: 10px;
-    margin-left: 10px;
+.vac.minimized {
+    
+ 
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    background-size: cover;
+}
+.minimized-vac{
+    margin: 20px;
+    padding: 30px;
+    width: 800px;
+    align-self: center;
+}
+.vac.minimized{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: start;
+    align-items: center;
+}
+.vac.minimized button{
+    width: 100px;
+}
+.minimized-vac h2 {
+    color: rgba(164, 136, 46, 0.9);
 }

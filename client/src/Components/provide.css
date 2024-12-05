@@ -1,116 +1,115 @@
-.provide {
+
+.contentes{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 950px;
-    background-attachment: fixed;
-    width: 100%;
-    /* height: 750px; */
-    color: white;
-    gap: 40px;
-  /* padding-top: 60px; */
+    gap: 10px;
 }
-
-.upper-provide {
+  .minimized-news .neews.minimized .contentes a{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    margin-left: 0px;
+    color: rgba(164,136,46,0.7);
+    font-size: larger;
+    font-weight: bolder;
 }
-
-.upper-provide h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(128, 96, 0);
-}
-
-.upper-provide p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    width: 700px;
-    text-align: center;
-}
-
-.middle-provider{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    /* justify-content: space-around; */
-    /* align-items: center; */
-}
-.provide-mid img{
-    width: 400px;
+.newsD img{
     height: 500px;
 }
-.provide-mid{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: space-around;
-}
-.proo-midd{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-.proo-midd .pro-mi{
+.newsD button{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
+    width: 100px;
+}
+.newsD h3{
+    margin: 15px;
+    margin-top: 24px;
+    margin-left: 0px;
+    color: rgba( 0,128, 0, 0.7);
+}
+.TNews .minimized-news{
+    display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 0px;
+    /* margin-right: 20px; */
+    margin-left: 30px;
+    width: 100%;
+    
 }
- .proo-midd .pro-mi h1{
-    color: rgba(0,128,0,0.7);
-    width: 400px;
+.newsD{
+    width: 500px;
 }
-.proo-midd .pro-mi p{
-    color: black;
-    width: 400px;
+.minimized-news h2{
+    color: rgba( 0,128, 0, 0.7);
+    margin-bottom: 20px;
 }
+.TNews{
+    display: flex;
+    gap: 30px;
 
-@media (max-width: 768px) {
-    .provide {
-        padding: 40px 20px;
-    }
-
-    .upper-provide p {
-        width: 90%; 
-    }
-
-    .provide-mid {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .provide-mid img {
-        max-width: 90%; 
-    }
-
-    .proo-midd {
-        flex-direction: column; 
-        align-items: center; 
-    }
 }
 
-@media (max-width: 480px) {
-    .upper-provide h1 {
-        font-size: large; 
-    }
+.im-info{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top:10px
+}
+.im-info img{
+    height: 300px;
+    width: 300px;
+}
+.im-info .em a{
+color: rgba( 0,128, 0, 0.7);
+}
 
-    .upper-provide p {
-        font-size: medium;
-    }
+.lower-ppp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.lower-ppp h2{
+    color: rgba( 0,128, 0, 0.7);
+    margin-bottom: 20px;
 
-    .proo-midd .pro-mi h1 {
-        font-size: medium; 
+}
+.lower-ppp li{
+    font-weight: small;
+}
+.news.minimized{
+    width: 200px;
+    scroll-behavior: smooth;
+}
+.minimized-news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+@keyframes appear {
+    from{
+       opacity:0;
+       scale: 0.5;
     }
-
-    .proo-midd .pro-mi p {
-        font-size: small; 
+    to{
+       opacity: 1;
+       scale: 1;
     }
+    
+}
+.newsD{
+   animation: appear 5s linear;
+   animation-timeline: view();
+   animation-range: entry 0% cover 20%;
+}
+lower-ppp{
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }

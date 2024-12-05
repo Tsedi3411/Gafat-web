@@ -5,6 +5,7 @@ import './about.css';
 import gs from '../assets/police3.jpg';
 import ImageSlider from './ImageSlider';
 import Chatbot from './Chatbot';
+import MySwiper from './Swip';
 
 const Vacancy = () => {
   const images = [
@@ -89,19 +90,8 @@ const Vacancy = () => {
 
   return (
     <>
-        <ImageSlider images={images} />
+       <MySwiper />
 
-      {/* <div className='news-upper'>
-        <img src={gs} alt='News Image' />
-        <div className='news-la'>
-          <h3>Let's Grow Together</h3>
-          <NavLink to='/'>Home </NavLink>
-          <p>/</p>
-          <NavLink to='/Vacancy'>Vacancies </NavLink>
-          <p>/</p>
-          <p>Detail</p>
-        </div>
-      </div> */}
       <h1>Vacancy Details</h1>
       {vacancy ? (
         <div className="vacancy-detail">
@@ -119,7 +109,7 @@ const Vacancy = () => {
           <p><strong>Salary:</strong> {vacancy.salary}</p>
           <p><strong>Deadline:</strong> {vacancy.deadline}</p>
           <p><strong>Description:</strong> {vacancy.description}</p>
-          <button onClick={() => handleApplyNow(vacancy)} className="apply-button">Apply Now</button>
+         <NavLink to='/applicant'><button >Apply Now</button></NavLink>
         </div>
       ) : (
         <p>Vacancy not found.</p>

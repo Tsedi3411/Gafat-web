@@ -13,8 +13,8 @@
     margin-left: 0px;
 }
 .newsD {
-    align-items: center;
-    max-width: 800px; 
+    /* align-items: center; */
+    max-width: 1000px; 
     padding: 20px;
     border: 1px solid #ccc; 
     border-radius: 8px;
@@ -25,10 +25,9 @@
   
   .newsD img {
     width: 100%;
-    height: auto; 
+    height: 300px; 
     border-radius: 8px;
   }
-  
   
   .newsD h1 {
     font-size: 2em; 
@@ -45,22 +44,15 @@
   .newsD a {
     display: inline-block; 
     margin-top: 20px;
-    padding: 10px 20px; 
-    background-color: #007bff; 
     color: white; 
     text-decoration: none; 
     border-radius: 5px; 
     transition: background-color 0.3s ease; 
   }
-  
-  .newsD a:hover {
-    background-color: #0056b3; 
-  }
-
 
   .TNews {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
   
   .newsD {
@@ -69,10 +61,7 @@
   }
   
   .minimized-news {
-    flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9; 
-    border-left: 1px solid #ccc; 
+    flex: 1; 
   }
   
   .neews {
@@ -81,9 +70,12 @@
   
   .neews.minimized {
     display: flex;
-    justify-content: start;
-    align-items: start;
-    /* align-items: center; */
+    width: 100%;
+    border-left: 1px solid #dad6d6; 
+    background-color: #f9f9f9; 
+   justify-content: start;
+   align-items: start;
+   height: auto;
   }
   
   .neews.minimized img {

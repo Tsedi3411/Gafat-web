@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './about.css'
 import { TbBuildingCottage } from "react-icons/tb";
+import { FaFacebook, FaTelegramPlane, FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import employee from '../assets/empP.jpg'
 
 import { NavLink, useParams } from 'react-router-dom'
 import { FaPeopleRoof } from "react-icons/fa6";
@@ -25,38 +27,24 @@ import './home.css'
 import sg from '../assets/police3.jpg'
 import history from '../assets/abtu.jpg'
 import Chatbot from './Chatbot';
+import MySwiper from './Swip';
+import Header from './Header';
 
 function About() {
   const images = [
-    { url: require('../assets/forOp.jpg'), alt: '', text: 'Welcome to Our Company' },
-    { url: require('../assets/police2.jpg'), alt: '', text: 'we believe in the power of dreams and the relentless pursuit of excellence' },
-    { url: require('../assets/police3.jpg'), alt: '', text: 'Our dedicated team is committed to delivering exceptional quality and service.' },
-    // Add more images as needed
+    { url: require('../assets/forOp.jpg'), alt: 'Welcome to Our Company', text: 'Welcome to Our Company' },
+    { url: require('../assets/police2.jpg'), alt: 'We believe in the power of dreams and the relentless pursuit of excellence', text: 'We believe in the power of dreams and the relentless pursuit of excellence' },
+    { url: require('../assets/police3.jpg'), alt: 'Our dedicated team is committed to delivering exceptional quality and service.', text: 'Our dedicated team is committed to delivering exceptional quality and service.' },
   ];
 
   const [fade, setFade] = useState(false);
 
-  const { id } = useParams();
+
 
 
   return (
-    <>
-
-    
-
-      <ImageSlider images={images} >
-       
-      </ImageSlider>
-
-
-      {/* <div className='news-upper' >
-        <img src={sg} alt='News Image' />
-        <div className='news-la'>
-          <NavLink to='/'>Home </NavLink>
-          <p>/</p>
-          <p>About</p>
-        </div>
-      </div> */}
+    <>  
+       <MySwiper />
       <div className='history'>
 
         <img src={history} alt='photo of our employee' className={`fade-image ${fade ? 'fade-out' : 'fade-in'}`}
@@ -120,13 +108,9 @@ function About() {
                 employee well-being, professional growth, and a sense of belonging for all.
               </li>
             </ul>
-
           </div>
-
-
         </div>
       </div>
-
       <div className='our-value'>
         <h1>Our Values</h1>
         <p>Peace of mind produces right values, right values produce right thoughts.
@@ -146,7 +130,71 @@ function About() {
           </div>
         </div>
       </div>
-
+      <div className='meet-employee'>
+        <h1>Constal experience meet the team employee's</h1>
+        <div className='emp-one'>
+          <div className='emp-two' >
+            <div className='emp-pics'>
+              <img src={employee} alt='general manager' />
+              <div className='emp-info'>
+                <h2>Coroniel Abebe</h2>
+                <p>Founder & G/Manager
+                  20 Years experice in ... and</p>
+                <div className='emp-icons'>
+                  <NavLink to='Facebook.com' > <FaFacebook size={20} color="#3b5998" /> </NavLink>
+                  <NavLink to='Telegram.com' ><FaTelegramPlane size={20} color="#0088cc" /> </NavLink>
+                  <NavLink to='abeeb@gmail.com.com' > <FaEnvelope size={20} color="#ea4335" /> </NavLink>
+                  <NavLink to='abebeLinkdin.com' > <FaLinkedin size={20} color="#0077b5" />  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className='emp-pics'>
+              <img src={employee} alt='general manager' />
+              <div className='emp-info'>
+                <h2>Coroniel Alemu</h2>
+                <p>Founder & G/Manager
+                  20 Years experice in ... and</p>
+                <div className='emp-icons'>
+                  <NavLink to='Facebook.com' ><FaFacebook size={20} color="#3b5998" /></NavLink>
+                  <NavLink to='Telegram.com' ><FaTelegramPlane size={20} color="#0088cc" /></NavLink>
+                  <NavLink to='abebe@gmail.com' ><FaEnvelope size={20} color="#ea4335" /></NavLink>
+                  <NavLink to='linkdin.com' ><FaLinkedin size={20} color="#0077b5" /> </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='emp-two'>
+            <div className='emp-pics'>
+              <img src={employee} alt='general manager' />
+              <div className='emp-info'>
+                <h2>Coroniel Ezra</h2>
+                <p>Founder & G/Manager
+                  20 Years experice in ... and</p>
+                <div className='emp-icons'>
+                  <NavLink to='Facebook.com' ><FaFacebook size={20} color="#3b5998" /></NavLink>
+                  <NavLink to='Telegram.com' ><FaTelegramPlane size={20} color="#0088cc" /></NavLink>
+                  <NavLink to='abebe@gmail.com' ><FaEnvelope size={20} color="#ea4335" /></NavLink>
+                  <NavLink to='linkdin.com' ><FaLinkedin size={20} color="#0077b5" /> </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className='emp-pics'>
+              <img src={employee} alt='general manager' />
+              <div className='emp-info'>
+                <h2>Coroniel kebede</h2>
+                <p>Founder & G/Manager
+                  20 Years experice in ... and</p>
+                <div className='emp-icons'>
+                  <NavLink to='Facebook.com' ><FaFacebook size={20} color="#3b5998" /></NavLink>
+                  <NavLink to='Telegram.com' ><FaTelegramPlane size={20} color="#0088cc" /></NavLink>
+                  <NavLink to='abebe@gmail.com' ><FaEnvelope size={20} color="#ea4335" /></NavLink>
+                  <NavLink to='linkdin.com' ><FaLinkedin size={20} color="#0077b5" /> </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className='up-partner'>
         <h1>Our Partner</h1>
         <div className='our-partnr'>
@@ -163,7 +211,6 @@ function About() {
       </div>
       <div className='join-us'>
         <p> Join us on this exciting journey where you’ll have the opportunity to shape workplace cultures, drive talent development, and help individuals thrive in their careers.</p>
-
       </div>
       <Chatbot />
     </>)

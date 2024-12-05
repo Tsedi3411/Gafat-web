@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-around;
     align-items: end;
+    gap: 20px;
 
 }
 
@@ -26,6 +27,10 @@
     padding: 12px 24px;
 
     height: 50px;
+}
+.footer-icons{
+    margin: 6px;
+    border-radius: 50%;
 }
 
 .middle-footer button:hover {
@@ -62,11 +67,11 @@
 }
 
 .upf-13 {
-    background-color: rgb(163, 160, 160);
+   
     padding: 10px;
     padding-bottom: 0px;
     margin: 5px;
-    color: black;
+    color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
 }
@@ -76,7 +81,7 @@
     flex-direction: column;
     display: flex;
     gap: 15px;
-    background-color: rgb(163, 160, 160);
+  
 
 
 }
@@ -85,7 +90,7 @@
 textarea {
     border: none;
     border-bottom: 1px solid black;
-    background-color: rgb(163, 160, 160);
+    /* background-color: rgb(163, 160, 160); */
 }
 
 .upf-13 h2 {
@@ -254,4 +259,42 @@ textarea {
     .upf-14 h2 {
         font-size: 16px; 
     }
+}
+.upf-12{
+    margin-top: 100px;
+    /* margin-left: 0px; */
+}
+.ph{
+    display: flex;
+    flex-direction: row;
+   margin-top: 20px;
+}
+.em{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.hm{
+   margin: 20px;
+}
+.bottom-footer{
+    height: 40px;
+}
+.upf-13{
+    display: flex;
+    flex-direction:column ;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+
+.upf-13 img{ 
+    height: 100px;
+    width: 100px;
+    border-radius: 0%;
+}
+.up-1333{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }

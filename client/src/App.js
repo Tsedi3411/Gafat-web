@@ -1,28 +1,35 @@
 import { RouterProvider } from 'react-router-dom';
-
 import './app.css'
 import router from './router';
-import { createContext } from 'react';
+import { createContext, useEffect } from 'react';
 import { useState } from 'react';
-// import ParallaxComponent from './Components/ParallaxComponent';
-
-const NewsContext = createContext()
+import Loader from './Components/Loader';
 
 
 
 
 function App() {
-  const [latestNews, setLatestNews] = useState(null)
-  return (
-    <div className="App">
+  const [isLoading, setIsLoading] = useState(true);
 
-      {/* <NewsContext.Provider value={{ latestNews, setLatestNews }}>
-        
-      </NewsContext.Provider> */}
+  useEffect(() => {
+      const timer = setTimeout(() => {
+          setIsLoading(false); 
+      }, 3000);
+
+      return () => clearTimeout(timer); 
+  }, []);
+  return (
+    <>
+    <div>
+    {isLoading ? (
+                <Loader /> 
+            ) : (
+    <div className="App">  
       <RouterProvider router={router} />
-      
     </div>
-  );
+    )}
+    </div>
+    </>);
 }
 
 export default App;

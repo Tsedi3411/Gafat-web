@@ -96,7 +96,7 @@
 
 .news-container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .main-news {
@@ -124,6 +124,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 400px;
 }
 
 .latest-news {
@@ -143,7 +144,8 @@
 }
 
 .neews img {
-    width: 800px;
+    width: 600px;
+    height: 400px;
     
 }
 
@@ -186,37 +188,43 @@
 /* news.css */
 
 .news-container {
-    display: flex; /* Use flexbox to align children side by side */
-    justify-content: space-between; /* Space between the two sections */
-    gap: 20px; /* Space between the columns */
-    padding: 20px; /* Padding around the container */
+    display: flex;
+    justify-content: space-between; 
+    align-items: start;
+    gap: 20px; 
+    padding: 20px;
 }
 
 .main-news {
-    width: 800px;
-    /* Give this section more space */
-    background-color: #ffffff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Inner padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 400px;
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    /* padding: 20px;  */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .minimized-news {
-    /* Give this section less space */
-    background-color: #ffffff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Inner padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Ensure news items display correctly in both sections */
 .latest-news,
 .minimized-news {
-    margin-top: 20px; /* Space above the news items */
+    margin-top: 20px; 
 }
+/* .minimized-news {
+    margin-top: 200px; 
+    margin-left: 200px;
+} */
 
 .neews {
-    margin-bottom: 20px; /* Space between news items */
+    margin-bottom: 20px; 
 }
 
 @media (max-width: 768px) {
@@ -250,4 +258,14 @@
         width: 400px;
         
     }
+}
+.neews.minimized{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.minimized-news{
+    display: flex;
+    justify-content: start;
+    align-items: start;
 }

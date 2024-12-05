@@ -12,6 +12,7 @@ import sg from '../assets/forOp.jpg';
 import gs from '../assets/police3.jpg';
 import fg from '../assets/forOp.jpg'; 
 import Chatbot from './Chatbot';
+import MySwiper from './Swip';
 
 const Newsdetail = () => {
 
@@ -57,7 +58,7 @@ const Newsdetail = () => {
       id: '1',
       image: im1,
       title: 'Give special opportunity to work with foreign companies',
-      Description: 'Experience the richness of working within a multicultural team that celebrates diversity',
+      Description:'Experience the richness of working within a multicultural team that celebrates diversity',
       link: '/news/detail/1',
     },
     {
@@ -91,7 +92,7 @@ const Newsdetail = () => {
   return (
     <>
 
-<ImageSlider images={images} />
+        <MySwiper />
       {/* <div className='news-upper'>
         <img src={gs} alt='News Image' />
         <div className='news-la'>

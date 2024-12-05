@@ -23,6 +23,7 @@ import o from '../assets/oromya-bank.png';
 import t from '../assets/tsedey.png';
 import { NavLink } from 'react-router-dom';
 import Chatbot from './Chatbot';
+import MySwiper from './Swip';
 
 function Partners() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -55,16 +56,7 @@ function Partners() {
     return (
         <>
              {/* <ImageSlider images={images} /> */}
-             <ImageSlider images={images} />
-        
-            {/* <div className='news-upper'>
-                <img src={sg} alt='News Image' />
-                <div className='news-la'>
-                    <NavLink to='/'>Home </NavLink>
-                    <p>/</p>
-                    <p>Award and Partners</p>
-                </div>
-            </div> */}
+             <MySwiper />
             <div className='partners'>
                 <div className='part-1'>
                     <h1>Our Partners</h1>

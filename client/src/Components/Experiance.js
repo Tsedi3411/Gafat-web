@@ -10,7 +10,7 @@ function Experiance() {
   return (<>
     <div className='experiance'>
         <div className='upper-exp'>
-          <h1>We have 12 Years of Experience of Security & Human Resource</h1>
+          <h1>We have 14 Years of Experience of Security & Human Resource</h1>
           <p>Gafat Security and Human Resources P.L.C established on December 10, 2011.Gafat Security and Human Resource Services 
             is an organization set up to serve the country, its citizens and its customers by filling in the gaps in the security 
             services sector in our country. It is a company that has been established by the country's legal experts and has complied 

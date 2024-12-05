@@ -8,6 +8,8 @@ import im2 from '../assets/plice1.jpg';
 import im3 from '../assets/police3.jpg';
 import ImageSlider from './ImageSlider';
 import Chatbot from './Chatbot';
+import MySwiper from './Swip';
+
 
 function News() {
 
@@ -53,8 +55,8 @@ function News() {
   return (
     <>
       
-        <ImageSlider images={images} />
-
+       <MySwiper/>
+      
         {/* <div className='news-upper'>
           <img src={gs} alt='News Image' />
           <div className='news-la'>
