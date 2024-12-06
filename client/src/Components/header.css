@@ -12,8 +12,6 @@
 }
 
 
-
-
 .left-header img {
     height: 50px;
 }
@@ -89,14 +87,14 @@
 
 .header-scroll {
     position: fixed;
-    /* top: 20px; */
-    /* right: 20px; */
     background-color: transparent;
     transition: background-color 0.3s ease;
     z-index: 1000;
     width: 100%;
+    color: white;
   }
   
   .header-scroll.scrolled {
     background-color: white;
+    color:black;
   }

@@ -133,13 +133,17 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     /* margin: 60px; */
     position: relative;
     gap: 50px;
 
 }
-
+.adHis{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 .history img {
     transition: opacity 0.5s ease-in-out;
 
@@ -400,7 +404,7 @@ ul {
     animation-range: entry 0% cover 20%;
 }
 
-.history{
+.side-history{
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;

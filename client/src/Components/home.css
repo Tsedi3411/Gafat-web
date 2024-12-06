@@ -443,11 +443,12 @@
 }
 
 .vision-reality {
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
-    background: rgba(0, 128, 0, 0.9);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    background: none;
+    box-shadow: none;
+    /* padding: 20px; */
+    
 }
 
 .vision-reality h3 {
@@ -720,24 +721,25 @@ button:hover {
     color: black;
 }
 .mdd1 button{
-    background: #000;
-    color: rgba(164, 136, 46, 0.9);
+    background: white;
+    color: black;
 }
 .mddd1 button{
-    background: #000;
-    color: rgba(164, 136, 46, 0.9);
+    background: white;
+    color: black;
 }
 .mddd1 button:hover{
-    background: rgba(164, 136, 46, 0.9);
+    background: black;
+    color: white;
 }
 .mdd1 button:hover{
-    background: rgba(164, 136, 46, 0.9);
+    background: black;
+    color: white;
 }
 .bttt-1 {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    
+    gap: 4px; 
     color: white;
 }
 .bttt-1 h2{

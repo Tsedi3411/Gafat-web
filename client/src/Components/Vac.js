@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import fg from '../assets/forOp.jpg';
 import './vac.css'
 import './news.css'
-import Background from './Background';
-import ImageSlider from './ImageSlider';
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
 
@@ -98,6 +96,8 @@ function Vac() {
 
   return (<> 
  <MySwiper />
+
+
     <div className='Vac'>
       <div className='filter-container'>
         <select value={selectedPosition} onChange={(e) => setSelectedPosition(e.target.value)}>

@@ -29,6 +29,7 @@ import history from '../assets/abtu.jpg'
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
 import Header from './Header';
+import { Image } from 'antd';
 
 function About() {
   const images = [
@@ -43,11 +44,12 @@ function About() {
 
 
   return (
-    <>  
-       <MySwiper />
+    <>
+      <MySwiper />
       <div className='history'>
-
-        <img src={history} alt='photo of our employee' className={`fade-image ${fade ? 'fade-out' : 'fade-in'}`}
+        <h1>About Us </h1>
+        <div className='adHis'>
+        <Image src={history} alt='photo of our employee' className={`fade-image ${fade ? 'fade-out' : 'fade-in'}`}
           onMouseEnter={() => setFade(true)}
           onMouseLeave={() => setFade(false)} />
         <div className='side-history'>
@@ -64,7 +66,7 @@ function About() {
             legal experts and has complied with all legal frameworks.</p>
           <div className='botton-history'><p><TbBuildingCottage /></p> <h3>Our commitment is to maintain your privacy and confidentiality at all times, whilst providing you with the service you require"</h3></div>
         </div>
-
+        </div>
       </div>
       <div className='about'>
 
@@ -135,7 +137,7 @@ function About() {
         <div className='emp-one'>
           <div className='emp-two' >
             <div className='emp-pics'>
-              <img src={employee} alt='general manager' />
+              <Image src={employee} alt='general manager' style={{height:250, width:200}} />
               <div className='emp-info'>
                 <h2>Coroniel Abebe</h2>
                 <p>Founder & G/Manager
@@ -149,7 +151,7 @@ function About() {
               </div>
             </div>
             <div className='emp-pics'>
-              <img src={employee} alt='general manager' />
+              <Image src={employee} alt='general manager' style={{height:250, width:200}} />
               <div className='emp-info'>
                 <h2>Coroniel Alemu</h2>
                 <p>Founder & G/Manager
@@ -165,7 +167,7 @@ function About() {
           </div>
           <div className='emp-two'>
             <div className='emp-pics'>
-              <img src={employee} alt='general manager' />
+              <Image src={employee} alt='general manager' style={{height:250, width:200}} />
               <div className='emp-info'>
                 <h2>Coroniel Ezra</h2>
                 <p>Founder & G/Manager
@@ -179,7 +181,7 @@ function About() {
               </div>
             </div>
             <div className='emp-pics'>
-              <img src={employee} alt='general manager' />
+              <Image src={employee} alt='general manager'  style={{height:250, width:200}}/>
               <div className='emp-info'>
                 <h2>Coroniel kebede</h2>
                 <p>Founder & G/Manager

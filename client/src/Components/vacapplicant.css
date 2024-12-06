@@ -1,0 +1,14 @@
+/* Example CSS adjustments in vacapplicant.css */
+.ant-form-item {
+    margin-bottom: 16px; /* Ensure spacing between items */
+}
+
+.ant-picker {
+    width: 100%; /* Ensure the DatePicker takes the full width */
+}
+
+.ant-picker-input {
+    text-align: left; /* Align text within the input */
+}
+
+/* Ensure no overrides that hide or misalign the DatePicker */

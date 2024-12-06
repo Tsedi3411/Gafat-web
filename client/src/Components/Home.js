@@ -33,6 +33,7 @@ import { NavLink } from 'react-router-dom';
 // import ImageSlider from './Hnews';
 import Countable from './Countable';
 import Chatbot from './Chatbot';
+import Pimages from './Pimages';
 
 
 
@@ -107,6 +108,14 @@ function Home() {
 
     <CardList />
 
+    
+    <div className='last-vacancy'>
+      <h3>Latest Vacancies</h3>
+      <p>Currently we have around <button className='btn1'>5</button>jobsAvailable on different position</p>
+      <NavLink to='/vacancy' > <button className='btn2'>VIEW MORE JOBS AND APPLY</button></NavLink>
+    </div>
+    
+    
     <div className='latest-news' >
       <h1>Latest News</h1>
       <div className='upper-news'>
@@ -118,27 +127,8 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className='last-vacancy'>
-      <h3>Latest Vacancies</h3>
-      <p>Currently we have around <button className='btn1'>5</button>jobsAvailable on different position</p>
-      <NavLink to='/vacancy' > <button className='btn2'>VIEW MORE JOBS AND APPLY</button></NavLink>
-    </div>
-    <div className='up-partner'>
-      <h1>Our Partner</h1>
-      <div className='our-partnr'>
-        <img src={a} alt='' className='part-nr' />
-        <img src={ab} alt='' className='part-nr' />
-        <img src={an} alt='' className='part-nr' />
-        <img src={b} alt='' className='part-nr' />
-        <img src={bu} alt='' className='part-nr' />
-        <img src={e} alt='' className='part-nr' />
-        <img src={k} alt='' className='part-nr' />
-        <img src={o} alt='' className='part-nr' />
-        <img src={t} alt='' className='part-nr' />
-      </div>
-    </div>
-
-    {/* <div className={`vision-reality ${isVisible ? 'animated' : ''}`} ref={ref}>
+    
+    <div className={`vision-reality ${isVisible ? 'animated' : ''}`} ref={ref}>
       <h3>Lets Turn Your Vision into Reality: Contact Gafat Today </h3>
       <p>Believe in your potential and embrace the challenges that come your way, for every obstacle is an opportunity for growth.</p>
       <div className='upper v-r'>
@@ -160,12 +150,12 @@ function Home() {
         <p>Ready to transform your HR processes and empower your team</p>
         <div className='mddd-1'>
           <div className='mdd1'>
-            <button> <FaPhone size={10} color="white" style={{ margin: '0 20px'}} />0913152743</button>
-            <button><FaPhone size={10} color="white" style={{ margin: '0 20px' }} />0118682211</button>
+            <button> <FaPhone size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px'}} />0913152743</button>
+            <button><FaPhone size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px' }} />0118682211</button>
           </div>
           <div className='mddd1'>
-          <button> <FaEnvelope size={10} color="white" style={{ margin: '0 20px' }} />info@gafatsecurity.com</button>
-            <button>  <FaEnvelope size={10} color="white" style={{ margin: '0 20px' }} />gafatsecure@gmail.com </button>
+          <button> <FaEnvelope size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px' }} />info@gafatsecurity.com</button>
+            <button>  <FaEnvelope size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px' }} />gafatsecure@gmail.com </button>
           </div>
         </div>
       </div>
@@ -179,7 +169,9 @@ function Home() {
           <p>Contact us today to learn how our innovative HR system can make a difference for your organization.</p>
         </div>
       </div>
-    </div> */}
+    </div>
+
+    <Pimages />
     <Chatbot />
   </>)
 }

@@ -24,6 +24,7 @@ import t from '../assets/tsedey.png';
 import { NavLink } from 'react-router-dom';
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
+import Pimages from './Pimages';
 
 function Partners() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -51,12 +52,12 @@ function Partners() {
         { url: require('../assets/police2.jpg'), alt: '', text: 'Come and grow together' },
         { url: require('../assets/police3.jpg'), alt: '', text: 'Trust Our Partnership' },
         // Add more images as needed
-      ];
+    ];
 
     return (
         <>
-             {/* <ImageSlider images={images} /> */}
-             <MySwiper />
+            {/* <ImageSlider images={images} /> */}
+            <MySwiper />
             <div className='partners'>
                 <div className='part-1'>
                     <h1>Our Partners</h1>
@@ -77,19 +78,9 @@ function Partners() {
                         <img src={pro} alt='' className='part-mr' onClick={() => handleImageClick(pro)} />
                         <img src={pwuc} alt='' className='part-mr' onClick={() => handleImageClick(pwuc)} />
                     </div>
-                    </div>
-                    <div className='our-partnr'>
-                        <img src={a} alt='' className='part-nr' />
-                        <img src={ab} alt='' className='part-nr' />
-                        <img src={an} alt='' className='part-nr' />
-                        <img src={b} alt='' className='part-nr' />
-                        <img src={bu} alt='' className='part-nr' />
-                        <img src={e} alt='' className='part-nr' />
-                        <img src={k} alt='' className='part-nr' />
-                        <img src={o} alt='' className='part-nr' />
-                        <img src={t} alt='' className='part-nr' />
-                    </div>  
-            </div>
+                </div>
+                </div>
+            <Pimages />
             <Chatbot />
         </>
     );

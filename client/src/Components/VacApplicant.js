@@ -2,25 +2,42 @@ import React, { useState } from 'react';
 import { CloseOutlined, UploadOutlined } from '@ant-design/icons';
 import { Button, Select, Card, DatePicker, Form, Input, Upload, Row, Col, message } from 'antd';
 import dayjs from 'dayjs';
-import './vacapplicant.css';
 import axios from 'axios';
+import moment from 'moment';
+import './vacapplicant.css'
+
 
 const dateTimestamp = dayjs('2024-01-01').valueOf();
 
-const normFile = (e) => {
-    console.log('Upload event:', e);
-    if (Array.isArray(e)) {
-        return e;
-    }
-    return e?.fileList;
-};
+
 
 const { Option } = Select;
 
 const VacApplicant = () => {
     const [form] = Form.useForm();
     const [currentPage, setCurrentPage] = useState(0);
-    const [pageOneValues, setPageOneValues] = useState({}); 
+    const [pageOneValues, setPageOneValues] = useState({});
+    const [fileList, setFileList] = useState([]);
+
+    const normFile = (e) => {
+        console.log('Upload event:', e);
+        if (Array.isArray(e)) {
+            return e;
+        }
+        return e?.fileList;
+    };
+
+
+    const handleUploadChange = async (info) => {
+        let newFileList = [...info.fileList];
+        if (info.file.status === 'done') {
+            message.success(`${info.file.name} file uploaded successfully`);
+            newFileList = newFileList.slice(-1); // Keep only the last uploaded file
+        } else if (info.file.status === 'error') {
+            message.error(`${info.file.name} file upload failed.`);
+        }
+        setFileList(newFileList);
+    };
 
     const nextPage = async () => {
         try {
@@ -63,14 +80,21 @@ const VacApplicant = () => {
             style={{
                 padding: 50,
                 margin: '0 auto',
-                maxWidth: 800,
+                paddingTop: 100,
+                maxWidth: 600,
+
             }}
             initialValues={{ date: dateTimestamp }}
             onFinish={onFinish}
             autoComplete="off"
         >
             {currentPage === 0 && (
-                <Card size="small" title="Application Form">
+                <Card size="small" title="Application Form" style={{
+                    display: 'flex',
+                    alignContent: 'center',
+                    flexDirection: 'column',
+                    alignItems: 'center'
+                }}>
                     <Form.Item
                         label="ሙሉ ስም"
                         name="name"
@@ -87,8 +111,19 @@ const VacApplicant = () => {
                         <Input />
                     </Form.Item>
 
-                    <Form.Item label="Birth Date" name="birthDate">
-                        <DatePicker />
+
+                    <Form.Item
+                        label="Birth Date"
+                        type="date"
+                        name="birthDate"
+                        rules={[{ required: true, message: 'Please select your birth date!' }]}
+                        style={{ display: 'flex', flexDirection: 'column', alignItems: 'right', color: 'black'}} 
+                    >
+                        <DatePicker
+                            format="YYYY-MM-DD"
+                            style={{ width: '100%', maxWidth: '300px', color: 'black'}}
+                            
+                        />
                     </Form.Item>
 
                     <Form.Item
@@ -97,7 +132,17 @@ const VacApplicant = () => {
                         valuePropName="fileList"
                         getValueFromEvent={normFile}
                     >
-                        <Upload name="logo" action="/upload.do" listType="picture">
+                        <Upload
+                            name="logo"
+                            listType="picture"
+                            fileList={fileList}
+                            onChange={handleUploadChange}
+                            beforeUpload={file => {
+                                // Optionally handle file validation here
+                                return true; // Allow the upload
+                            }}
+                            action="https://your-file-upload-endpoint.com/upload" // Your upload endpoint
+                        >
                             <Button icon={<UploadOutlined />}>Click to upload</Button>
                         </Upload>
                     </Form.Item>
@@ -125,9 +170,9 @@ const VacApplicant = () => {
                         </Select>
                     </Form.Item>
 
-                    <Button 
-                        type="primary" 
-                        onClick={nextPage} 
+                    <Button
+                        type="primary"
+                        onClick={nextPage}
                         style={{ width: 200, display: 'block', margin: '0 auto' }}
                     >
                         Next
@@ -136,9 +181,16 @@ const VacApplicant = () => {
             )}
 
             {currentPage === 1 && (
-                <Card size="small" title="Location Details">
+                <Card size="small" title="Address Information"
+                    style={{
+
+                        maxWidth: 900,
+
+                    }}
+
+                >
                     <Row gutter={16}>
-                        <Col span={8}>
+                        <Col span={15}>
                             <Form.Item
                                 label="City/Region"
                                 name="city"
@@ -147,7 +199,7 @@ const VacApplicant = () => {
                                 <Input />
                             </Form.Item>
                         </Col>
-                        <Col span={8}>
+                        <Col span={15}>
                             <Form.Item
                                 label="Subcity/Zone"
                                 name="subcity"
@@ -156,7 +208,11 @@ const VacApplicant = () => {
                                 <Input />
                             </Form.Item>
                         </Col>
-                        <Col span={8}>
+
+                    </Row>
+
+                    <Row gutter={16}>
+                        <Col span={10}>
                             <Form.Item
                                 label="Wereda"
                                 name="wereda"
@@ -165,9 +221,7 @@ const VacApplicant = () => {
                                 <Input />
                             </Form.Item>
                         </Col>
-                    </Row>
-                    <Row gutter={16}>
-                        <Col span={8}>
+                        <Col span={10}>
                             <Form.Item
                                 label="Kebele"
                                 name="kebele"
@@ -176,16 +230,17 @@ const VacApplicant = () => {
                                 <Input />
                             </Form.Item>
                         </Col>
-                        <Col span={8}>
+                    </Row>
+                    <Row gutter={16}>
+
+                        <Col span={15}>
                             <Form.Item
-                                label="House Number"
+                                label="House No"
                                 name="houseNumber"
                             >
                                 <Input />
                             </Form.Item>
                         </Col>
-                    </Row>
-                    <Row gutter={16}>
                         <Col span={12}>
                             <Form.Item
                                 label="Phone"
@@ -195,31 +250,43 @@ const VacApplicant = () => {
                                 <Input />
                             </Form.Item>
                         </Col>
-                        <Col span={12}>
+                    </Row>
+                    <Row gutter={16}>
+
+                        <Col span={15}>
                             <Form.Item
-                                label="Alternate Phone"
+                                label="Alternate Ph"
                                 name="alternatePhone"
                                 rules={[{ required: false }]}
                             >
                                 <Input />
                             </Form.Item>
                         </Col>
+                        <Col span={15}>
+                            <Form.Item
+                                name="email"
+                                label="Email"
+                                rules={[{ required: false }]}
+                            >
+                                <Input />
+                            </Form.Item>
+                        </Col>
                     </Row>
-                    <Form.Item
+                    {/* <Form.Item
                         name="email"
                         label="Email"
                         rules={[{ type: 'email', message: 'Please enter a valid email!' }]}
                     >
                         <Input />
-                    </Form.Item>
+                    </Form.Item> */}
 
                     <Button type="default" onClick={prevPage} style={{ width: 200, display: 'block', margin: '0 auto' }}>
                         Previous
                     </Button>
-                   
-                    <Button 
-                        type="primary" 
-                        htmlType="submit" 
+
+                    <Button
+                        type="primary"
+                        htmlType="submit"
                         style={{ width: 200, display: 'block', margin: '2 auto' }}
                     >
                         Submit

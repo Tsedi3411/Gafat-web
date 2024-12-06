@@ -103,11 +103,11 @@ color: rgba( 0,128, 0, 0.7);
     }
     
 }
-.newsD{
+/* .newsD{
    animation: appear 5s linear;
    animation-timeline: view();
    animation-range: entry 0% cover 20%;
-}
+} */
 lower-ppp{
     animation: appear 5s linear;
     animation-timeline: view();

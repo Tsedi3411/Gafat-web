@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import './styles.css';
+import './swipe.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { NavLink } from 'react-router-dom';
 
@@ -29,6 +29,7 @@ export default function MySwiper() {
             speed={800} // Set the transition speed to 800ms
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
+            style={{ height: '600px' }} 
         >
             {[
                 {
@@ -53,11 +54,11 @@ export default function MySwiper() {
                         <img
                             src={slide.img}
                             alt={`Slide ${index + 1}`}
-                            style={{ position: 'absolute', width: '100%', height: '700px', objectFit: 'cover' }}
+                            style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                         <p 
                             className="text-animation" 
-                            style={{position: 'relative', animationDelay: `${index * 0.3}s` }} 
+                            style={{ position: 'relative', animationDelay: `${index * 0.3}s` }} 
                         >
                             {slide.text}
                         </p>

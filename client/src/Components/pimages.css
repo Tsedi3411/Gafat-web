@@ -1,0 +1,11 @@
+.Swiper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    overflow: hidden;
+    height: 100;
+}
+
