@@ -97,6 +97,7 @@ select:focus {
     margin-top: 20px;
     justify-content: start;
     align-items: center;
+    width: 400px;
 }
 .vac.minimized button{
     width: 100px;

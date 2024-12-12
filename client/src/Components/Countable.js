@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FaUserTie, FaUsers, FaHandsHelping, FaBriefcase } from 'react-icons/fa'; 
+import { FaUserTie, FaUsers, FaHandsHelping, FaBriefcase } from 'react-icons/fa';
 import './amount.css'
 
 import { BiAbacus } from "react-icons/bi";
@@ -37,7 +37,7 @@ const ScrollAmount = ({ targetValue, description, Icon }) => {
   }, []);
 
   const animateCount = () => {
-    const duration = 2000; // Animation duration in ms
+    const duration = 2000; 
     const start = 0;
     const end = targetValue;
     const startTime = performance.now();
@@ -71,26 +71,26 @@ const Countable = () => {
       <h1>Our Achievements</h1>
       <div className='am11'> {/* Spacer for scrolling */}
 
-      <ScrollAmount 
-        targetValue={14} 
-        description="Years of Experience" 
-        Icon={BiAbacus} 
-      />
-      <ScrollAmount 
-        targetValue={100} 
-        description="Our Partners" 
-        Icon={ BsBank} 
-      />
-      <ScrollAmount 
-        targetValue={10000} 
-        description="Our Employees" 
-        Icon={BiUserCheck} 
-      />
-      <ScrollAmount 
-        targetValue={102} 
-        description="Our Staffs" 
-        Icon={BsFillBarChartLineFill} 
-      />
+        <ScrollAmount
+          targetValue={14}
+          description="Years of Experience"
+          Icon={BiAbacus}
+        />
+        <ScrollAmount
+          targetValue={100}
+          description="Our Partners"
+          Icon={BsBank}
+        />
+        <ScrollAmount
+          targetValue={10000}
+          description="Our Employees"
+          Icon={BiUserCheck}
+        />
+        <ScrollAmount
+          targetValue={102}
+          description="Our Staffs"
+          Icon={BsFillBarChartLineFill}
+        />
       </div>
     </div>
   );

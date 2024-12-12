@@ -1,12 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './news.css';
-import gs from '../assets/police3.jpg';
 import fg from '../assets/forOp.jpg';
 import im1 from '../assets/hr.jpg';
 import im2 from '../assets/plice1.jpg';
 import im3 from '../assets/police3.jpg';
-import ImageSlider from './ImageSlider';
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
 
@@ -45,29 +43,12 @@ function News() {
     },
   ];
 
-  const images = [
-    { url: require('../assets/forOp.jpg'), alt: '', text: 'Welcome to Our Company' },
-    { url: require('../assets/police2.jpg'), alt: '', text: 'Come and grow together' },
-    { url: require('../assets/police3.jpg'), alt: '', text: 'Trust Our Partnership' },
-    // Add more images as needed
-  ];
 
   return (
     <>
       
        <MySwiper/>
-      
-        {/* <div className='news-upper'>
-          <img src={gs} alt='News Image' />
-          <div className='news-la'>
-            <h2>Your Voice, Our Story.</h2>
-            <NavLink to='/'>Home </NavLink>
-            <p>/</p>
-            <p>News</p>
-          </div>
-        </div> */}
-
-
+       
         <div className='news-container'>
           <div className='main-news'>
             <h1>News</h1>

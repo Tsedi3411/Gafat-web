@@ -15,6 +15,7 @@ import NewsBlog from "./Components/NewsBlog";
 import Blog from "./Components/BlogDetail";
 import Vac from "./Components/Vac";
 import VacApplicant from "./Components/VacApplicant";
+import Provide from "./Components/Provide ";
 
 
 
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
         path:'/Vacancy',
         element:<Vac />
       },
+      
+      {
+        path: "/provide",
+        element: <Provide />,
+      },
       {
         path: '/forign',
         element: <Forign />
@@ -84,10 +90,7 @@ const router = createBrowserRouter([
         path: "/newsblog/detail:id",
         element: <Blog />
       },
-      // {
-      //   path:"detail/blog:id",
-      //   element:<NewsBlog />
-      // }
+    
     ],
   },
 ]);

@@ -11,7 +11,6 @@ import 'swiper/css/navigation';
 
 import './swipe.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { NavLink } from 'react-router-dom';
 
 export default function MySwiper() {
     return (
@@ -19,14 +18,15 @@ export default function MySwiper() {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 3500,
+                delay: 4500,
                 disableOnInteraction: false,
             }}
             pagination={{
                 clickable: true,
             }}
             navigation={true}
-            speed={800} // Set the transition speed to 800ms
+            speed={1000}
+            loop={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
             style={{ height: '600px' }} 
@@ -34,23 +34,23 @@ export default function MySwiper() {
             {[
                 {
                     img: pic1,
-                    text: "HR services empower individuals and organizations to reach their full potential.",
+                    text: "Gafat HR services drive innovation by attracting diverse talent.",
                 },
                 {
                     img: pic2,
-                    text: "Building meaningful connections between employees and leadership is at the heart of HR.",
+                    text: "Streamline your hiring process with our innovative recruitment tools.",
                 },
                 {
                     img: pic3,
-                    text: "HR services are crucial in guiding organizations through challenges and opportunities.",
+                    text: "Gafat HR services are crucial in guiding organizations through challenges and opportunities.",
                 },
                 {
                     img: pic4,
-                    text: "HR services drive innovation by attracting diverse talent and cultivating an environment where creativity thrives.",
+                    text: "On the security front, we’ve upgraded our surveillance technology.",
                 }
             ].map((slide, index) => (
                 <SwiperSlide key={index} style={{ color: 'white' }}>
-                    <div className='First-slider'>
+                    <div className ='First-slider'>
                         <img
                             src={slide.img}
                             alt={`Slide ${index + 1}`}
@@ -61,8 +61,7 @@ export default function MySwiper() {
                             style={{ position: 'relative', animationDelay: `${index * 0.3}s` }} 
                         >
                             {slide.text}
-                        </p>
-                    
+                        </p>                   
                     </div>
                 </SwiperSlide>
             ))}

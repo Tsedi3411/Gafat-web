@@ -139,11 +139,13 @@ ul {
     gap: 50px;
 
 }
-.adHis{
+
+.adHis {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
+
 .history img {
     transition: opacity 0.5s ease-in-out;
 
@@ -291,6 +293,18 @@ ul {
         align-items: center;
     }
 
+    .adHis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .emp-pics {
+        width: 400px;
+        height: 500px;
+    }
+
     .vision,
     .mission {
         width: 90%;
@@ -299,6 +313,13 @@ ul {
 
     ul {
         width: 100%;
+    }
+
+    .emp-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .history {
@@ -323,6 +344,10 @@ ul {
 
         width: 90%;
     }
+
+    .emp-pics Image {
+        width: 400px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -334,9 +359,32 @@ ul {
         height: 300px;
     }
 
+    .adHis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .emp-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .emp-pics Image {
+        width: 400px;
+    }
+
     .up-partner h1 {
         font-size: 24px;
-        margin-top: 50px;
+        margin-top: 20px;
+    }
+
+    .emp-pics {
+        width: 400px;
+        height: 500px;
     }
 
     .our-value {
@@ -390,12 +438,13 @@ ul {
 .about {
     animation: appear 8s linear;
     animation-timeline: view();
-    animation-range: entry 0% ;
+    animation-range: entry 0%;
 }
-.join-us{
+
+.join-us {
     animation: motive 8s linear;
     animation-timeline: view();
-    animation-range: entry 0% ;
+    animation-range: entry 0%;
 }
 
 .our-value {
@@ -404,65 +453,75 @@ ul {
     animation-range: entry 0% cover 20%;
 }
 
-.side-history{
+.side-history {
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
 }
-.home-images{
+
+.home-images {
     animation: appear 8s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
 }
 
-.meet-employee{
+.meet-employee {
     display: flex;
     flex-direction: column;
 }
-.meet-employee h1{
-    margin-bottom:30px;
+
+.meet-employee h1 {
+    margin-bottom: 30px;
 }
-.emp-one{
+
+.emp-one {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 70px;
 }
-.emp-two{
+
+.emp-two {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
-.emp-pics{
+
+.emp-pics {
     display: flex;
-    flex-direction:row ;
+    flex-direction: row;
     gap: 10px;
     background-color: rgb(240, 243, 246);
     border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.emp-info{
-    position: relative; 
+
+.emp-info {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap:20px;
-    
+    gap: 20px;
+
 }
-.emp-info p{
+
+.emp-info p {
     width: 270px;
 }
-.emp-pics img{
+
+.emp-pics img {
     width: 200px;
     height: 200px;
 }
-.emp-icons{
+
+.emp-icons {
     display: flex;
     gap: 5px;
-    justify-content:flex-start;
-   margin-top: 50px;
-   
+    justify-content: flex-start;
+    margin-top: 50px;
+
 }
+
 @keyframes motive {
     from {
         opacity: 0;
@@ -479,5 +538,62 @@ ul {
 .emp-pics {
     animation: appear 8s linear;
     animation-timeline: view();
-    animation-range: entry 0% ;
+    animation-range: entry 0%;
+}
+
+@media (max-width: 768px) {
+    .emp-one {
+        flex-direction: column;
+        align-items: center;
+        /* gap: 10px; */
+    }
+
+    .emp-two {
+        /* gap: 10px;  */
+    }
+
+    .emp-pics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emp-info p {
+        max-width: 90%;
+    }
+
+    .emp-pics img {
+        max-width: 500px;
+    }
+
+    .emp-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .emp-one {
+        gap: 10px;
+    }
+
+    .emp-two {
+        gap: 10px;
+    }
+
+    .emp-pics img {
+        max-width: 400px;
+    }
+
+    .emp-icons {
+        margin-top: 30px;
+    }
+
+    .emp-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+    }
 }

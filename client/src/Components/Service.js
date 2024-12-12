@@ -1,7 +1,7 @@
 import React from 'react'
 import './service.css'
 import './about.css'
-import ImageSlider from './ImageSlider';
+
 
 
 
@@ -10,7 +10,7 @@ import Provide from './Provide '
 import Experiance from './Experiance'
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
-import Header from './Header';
+
 
 
 function Service() {

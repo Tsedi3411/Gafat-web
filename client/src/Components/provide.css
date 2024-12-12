@@ -1,89 +1,101 @@
-
-.contentes{
+.contentes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
 }
-  .minimized-news .neews.minimized .contentes a{
+
+.minimized-news .neews.minimized .contentes a {
     display: flex;
     justify-content: start;
     align-items: start;
     margin-left: 0px;
-    color: rgba(164,136,46,0.7);
+    color: rgba(164, 136, 46, 0.7);
     font-size: larger;
     font-weight: bolder;
 }
-.newsD img{
-    height: 500px;
+
+.newsD img {
+    height: 470px;
+    width: auto; 
 }
-.newsD button{
+
+.newsD button {
     display: flex;
     justify-content: center;
     align-items: end;
     width: 100px;
 }
-.newsD h3{
+
+.newsD h3 {
     margin: 15px;
     margin-top: 24px;
     margin-left: 0px;
-    color: rgba( 0,128, 0, 0.7);
+    color: rgba(0, 128, 0, 0.7);
 }
-.TNews .minimized-news{
+
+.TNews .minimized-news {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
     margin-top: 0px;
-    /* margin-right: 20px; */
     margin-left: 30px;
     width: 100%;
-    
 }
-.newsD{
+
+.newsD {
     width: 500px;
 }
-.minimized-news h2{
-    color: rgba( 0,128, 0, 0.7);
-    margin-bottom: 20px;
+
+
+.minimized-news h2 {
+    color: rgba(0, 128, 0, 0.7);
+    /* margin-bottom: 20px; */
 }
-.TNews{
+
+
+.tserv {
     display: flex;
-    gap: 30px;
-
+    flex-direction: row;
 }
 
-.im-info{
+.im-info {
     display: flex;
     flex-direction: row;
     margin-left: 20px;
-    margin-top:10px
+    margin-top: 10px;
 }
-.im-info img{
+
+.im-info img {
     height: 300px;
     width: 300px;
 }
-.im-info .em a{
-color: rgba( 0,128, 0, 0.7);
+
+.im-info .em a {
+    color: rgba(0, 128, 0, 0.7);
 }
 
-.lower-ppp{
+.lower-ppp {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.lower-ppp h2{
-    color: rgba( 0,128, 0, 0.7);
-    margin-bottom: 20px;
 
+.lower-ppp h2 {
+    color: rgba(0, 128, 0, 0.7);
+    /* margin-bottom: 20px; */
 }
-.lower-ppp li{
+
+.lower-ppp li {
     font-weight: small;
 }
-.news.minimized{
+
+.news.minimized {
     width: 200px;
     scroll-behavior: smooth;
 }
-.minimized-news{
+
+.minimized-news {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,24 +104,206 @@ color: rgba( 0,128, 0, 0.7);
     background-color: white;
     scroll-behavior: smooth;
 }
+
 @keyframes appear {
-    from{
-       opacity:0;
-       scale: 0.5;
+    from {
+        opacity: 0;
+        scale: 0.5;
     }
-    to{
-       opacity: 1;
-       scale: 1;
+    to {
+        opacity: 1;
+        scale: 1;
     }
+}
+
+.lower-ppp {
+    animation: appear 5s linear;
+    animation-fill-mode: forwards; 
+}
+
+
+
+.TNews{
+    display: flex;
+    flex-direction: column;
     
 }
-/* .newsD{
-   animation: appear 5s linear;
-   animation-timeline: view();
-   animation-range: entry 0% cover 20%;
+.minimized-service{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-left: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.tserv{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    
+}
+.upper-ppp img{
+   width: 1000px;
+}
+
+.minimized-service {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto; 
+}
+
+/* .news {
+    margin: 10px 0; 
 } */
-lower-ppp{
-    animation: appear 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+.upper-ppp {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px; 
+}
+
+.upper-ppp img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    /* .TNews{
+        width: auto;
+    } */
+    .tserv{
+        display :flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .minimized-news{
+        display :flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsD {
+        width: 100%; 
+    }
+
+    .im-info img {
+        height: 200px;
+        width: 200px; 
+    }
+
+    .minimized-news {
+        width: 100%; 
+    }
+    .upper-ppp img{
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .TNews{
+        width: auto;
+    } */
+    .tserv{
+        display :flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .minimized-news{
+        display :flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsD img {
+        height: 300px; 
+    }
+
+    .lower-ppp {
+        gap: 15px; 
+    }
+
+    .minimized-news {
+        width: 100%; 
+    }
+    .contentes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 50px;
+    }
+    /* .TNews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+    .news.minimized{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+   
+    .tserv{
+        display :flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .minimized-news{
+        display :flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsD img {
+        height: 200px; 
+    }
+
+    .newsD {
+        width: 100%; 
+    }
+
+    .im-info {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .im-info img {
+        height: 150px;
+        width: 150px; 
+    }
+
+    .minimized-news {
+        width: 100%;
+    }
+  
+}
+
+/* Media query for small devices */
+@media (max-width: 600px) {
+    .upper-ppp {
+        padding: 5px; 
+    }
+
+    .upper-ppp img {
+        
+        max-width: 90%; 
+        margin: auto; 
+    }
+}
+.TNews{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import './footer.css'
 import logo from '../assets/logo.jpg'
-import e from '../assets/email.png'
 import im11 from '../assets/forOp.jpg'
 import im21 from '../assets/forOp.jpg'
 import im31 from '../assets/forOp.jpg'
@@ -40,10 +39,9 @@ function Footer() {
             <div className='ph'>
               <FaPhone size={16} color="green" style={{ margin: '0 20px' }} />
               <div>
-                <p> 0118682211</p>
+                <p>0908333377</p>
                 <p>0913152743</p>
-                <p>0911997390</p>
-                <p>0912642890</p>
+                
                 <p> infoFax : +251 114-70 68 32</p>
               </div>
 

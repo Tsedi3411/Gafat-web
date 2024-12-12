@@ -86,7 +86,7 @@ const ProductShow = () => {
   ]
   return (
     <div className={styles.box}>
-      <h2>Welcome to Gafat Secure Hr</h2>
+      <h2></h2>
       <div className={styles.cont}>
         <div className={styles.slider}>
           <div className={styles.lines}>{products.map(l => <span key={l.id} style={{ background: selectedItem >= l.id ? 'rgb(164,136,46)' : 'transparent' }} className={styles.line}></span>)}</div>

@@ -52,19 +52,21 @@
 .contactss{
     display: flex;
     flex-direction: row;
-    height: 400px;
+    height: 450px;
     box-shadow: 1px 1px ;
     margin-bottom: 20px;
     gap: 20px;
     justify-content: center;
+    /* align-items: center; */
     margin-top: 40px;
 }
 .cont-upper{
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
+    /* justify-content: start;
+    align-items: center; */
     margin-bottom: -10px;
+    text-align: center;
     gap: 20px;
 }
 .cont-upper .fa{
@@ -77,6 +79,9 @@
 .cont-upper ul{
    display: flex;
    align-items: center;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
 }
 .cont-upper ol{
     display: flex;
@@ -86,14 +91,16 @@
 
 .cont-upper ul li{
     display: flex;
-    flex-direction: row;
+   text-align: center;
     color: rgba(0, 128, 0, 0.7);
 }
 .cont-upper ul a{
    text-decoration: none;
     color: rgba(0, 128, 0, 0.7);
+    margin-top: 5px;
 }
 .cont-upper ul li p{
+    margin-top: 5px;
     color: rgba(0, 0, 0, 0.5);
 }
 .cont-upper ol li{
@@ -107,14 +114,52 @@
         height: auto; 
         box-shadow: none;
     }
-
+    .info-list a {
+        font-size: 0.9em; 
+        text-align: center;
+        width: 400px;
+    }
     .cont-upper {
-        align-items: flex-start; 
-        gap: 15px; 
+        text-align: center;
     }
 
     .cont-upper ol {
         width: 100%; 
         margin-left: 0; 
+    }
+
+    .cont-upper h3{
+        text-align: center;
+    }
+}
+
+@media (max-width: 480) {
+    .contactss {
+        flex-direction: column; 
+        height: auto; 
+        box-shadow: none;
+    }
+    .info-list a {
+        width: 400px;
+        font-size: 0.9em; 
+        text-align: center;
+    }
+
+    .cont-upper {
+        text-align: center;
+    }
+    .cont-upper h3{
+        text-align: center;
+    }
+
+    .cont-upper ol {
+        width: 100%; 
+        margin-left: 0; 
+    }
+    .cont-upper h3{
+        text-align: center;
+    }
+    .cont-upper a{
+        width: 300px;
     }
 }

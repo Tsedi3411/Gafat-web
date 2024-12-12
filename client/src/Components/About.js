@@ -9,27 +9,13 @@ import { FaPeopleRoof } from "react-icons/fa6";
 import { IoIosPeople } from "react-icons/io";
 import { FaGlobe } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
-import ImageSlider from './ImageSlider';
-
-import a from '../assets/abay-bank.jpg'
-import ab from '../assets/Abyssinia-bank.png'
-import an from '../assets/anbesa-bank.png'
-import b from '../assets/bherawi.jpg'
-import bu from '../assets/buna-bank.png'
-import e from '../assets/Enat-bank.jpg'
-import k from '../assets/keyizen.jpg'
-import o from '../assets/oromya-bank.png'
-import t from '../assets/tsedey.png'
 
 import './home.css'
-
-
-import sg from '../assets/police3.jpg'
 import history from '../assets/abtu.jpg'
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
-import Header from './Header';
 import { Image } from 'antd';
+import Pimages from './Pimages';
 
 function About() {
   const images = [
@@ -49,23 +35,23 @@ function About() {
       <div className='history'>
         <h1>About Us </h1>
         <div className='adHis'>
-        <Image src={history} alt='photo of our employee' className={`fade-image ${fade ? 'fade-out' : 'fade-in'}`}
-          onMouseEnter={() => setFade(true)}
-          onMouseLeave={() => setFade(false)} />
-        <div className='side-history'>
-          <h1>We Have 14 Years Of Experience Of Security & Human Resource</h1>
-          <p>There are a number of initiatives in the world that threaten the security of our nations as we move forward. Efforts to
-            address these issues and to focus solely on the purpose for which institutions are established should not be left to the
-            government or the security forces alone. The largest number of private security services in the world, with the support
-            of the government security forces and members of the business community, are doing their part to protect the commercial
-            centers from crime and danger.Institutions that provide organized personal protection services in our country have also
-            been established and are providing services. Although the sector is relatively inexperienced, there are some limitations
-            in operation, organization, human resource development, and logistics. </p>
-          <p>Gafat Security and Human Resource Services is an organization set up to serve the country, its citizens and its customers by
-            filling in the gaps in the security services sector in our country. It is a company that has been established by the country's
-            legal experts and has complied with all legal frameworks.</p>
-          <div className='botton-history'><p><TbBuildingCottage /></p> <h3>Our commitment is to maintain your privacy and confidentiality at all times, whilst providing you with the service you require"</h3></div>
-        </div>
+          <Image src={history} alt='photo of our employee' className={`fade-image ${fade ? 'fade-out' : 'fade-in'}`}
+            onMouseEnter={() => setFade(true)}
+            onMouseLeave={() => setFade(false)} />
+          <div className='side-history'>
+            <h1>We Have 14 Years Of Experience Of Security & Human Resource</h1>
+            <p>There are a number of initiatives in the world that threaten the security of our nations as we move forward. Efforts to
+              address these issues and to focus solely on the purpose for which institutions are established should not be left to the
+              government or the security forces alone. The largest number of private security services in the world, with the support
+              of the government security forces and members of the business community, are doing their part to protect the commercial
+              centers from crime and danger.Institutions that provide organized personal protection services in our country have also
+              been established and are providing services. Although the sector is relatively inexperienced, there are some limitations
+              in operation, organization, human resource development, and logistics. </p>
+            <p>Gafat Security and Human Resource Services is an organization set up to serve the country, its citizens and its customers by
+              filling in the gaps in the security services sector in our country. It is a company that has been established by the country's
+              legal experts and has complied with all legal frameworks.</p>
+            <div className='botton-history'><p><TbBuildingCottage /></p> <h3>Our commitment is to maintain your privacy and confidentiality at all times, whilst providing you with the service you require"</h3></div>
+          </div>
         </div>
       </div>
       <div className='about'>
@@ -137,7 +123,7 @@ function About() {
         <div className='emp-one'>
           <div className='emp-two' >
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager' style={{height:250, width:200}} />
+              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
                 <h2>Coroniel Abebe</h2>
                 <p>Founder & G/Manager
@@ -151,7 +137,7 @@ function About() {
               </div>
             </div>
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager' style={{height:250, width:200}} />
+              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
                 <h2>Coroniel Alemu</h2>
                 <p>Founder & G/Manager
@@ -167,7 +153,7 @@ function About() {
           </div>
           <div className='emp-two'>
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager' style={{height:250, width:200}} />
+              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
                 <h2>Coroniel Ezra</h2>
                 <p>Founder & G/Manager
@@ -181,7 +167,7 @@ function About() {
               </div>
             </div>
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager'  style={{height:250, width:200}}/>
+              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
                 <h2>Coroniel kebede</h2>
                 <p>Founder & G/Manager
@@ -197,20 +183,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className='up-partner'>
-        <h1>Our Partner</h1>
-        <div className='our-partnr'>
-          <img src={a} alt='' className='part-nr' />
-          <img src={ab} alt='' className=' part-nr' />
-          <img src={an} alt='' className='part-nr' />
-          <img src={b} alt='' className='part-nr' />
-          <img src={bu} alt='' className='part-nr' />
-          <img src={e} alt='' className='part-nr' />
-          <img src={k} alt='' className='part-nr' />
-          <img src={o} alt='' className='part-nr' />
-          <img src={t} alt='' className='part-nr' />
-        </div>
-      </div>
+      <Pimages />
       <div className='join-us'>
         <p> Join us on this exciting journey where you’ll have the opportunity to shape workplace cultures, drive talent development, and help individuals thrive in their careers.</p>
       </div>

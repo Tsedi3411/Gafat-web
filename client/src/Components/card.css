@@ -81,6 +81,13 @@
 }
 
 @media (max-width: 480px) {
+    .card-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+
+    }
     .upper-cl {
         padding: 20px 20px;
     }
@@ -90,6 +97,10 @@
     }
 
     .lower-cl .colsr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
         flex-direction: column;
         gap: 30px;
     }
@@ -105,3 +116,4 @@
         align-items: center;
     }
 }
+

@@ -1,16 +1,16 @@
 import React from 'react';
 import { NavLink, useParams } from 'react-router-dom';
-import './newsDetail.css';
+// import './newsDetail.css';
 // import './detail.css';
-import ImageSlider from './ImageSlider';
 
 
+import './news.css'
 import im1 from '../assets/hr.jpg';
 import im2 from '../assets/plice1.jpg';
 import im3 from '../assets/police3.jpg';
 import sg from '../assets/forOp.jpg';
-import gs from '../assets/police3.jpg';
-import fg from '../assets/forOp.jpg'; 
+
+import fg from '../assets/forOp.jpg';
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
 
@@ -58,7 +58,7 @@ const Newsdetail = () => {
       id: '1',
       image: im1,
       title: 'Give special opportunity to work with foreign companies',
-      Description:'Experience the richness of working within a multicultural team that celebrates diversity',
+      Description: 'Experience the richness of working within a multicultural team that celebrates diversity',
       link: '/news/detail/1',
     },
     {
@@ -87,25 +87,16 @@ const Newsdetail = () => {
   const { id } = useParams(); // Get the ID from the URL parameters
   const newsItem = neews.find(item => item.id === id); // Find the news item by ID
 
- 
+
 
   return (
     <>
 
-        <MySwiper />
-      {/* <div className='news-upper'>
-        <img src={gs} alt='News Image' />
-        <div className='news-la'>
-          <h2>Your Voice, Our Story.</h2>
-          <NavLink to='/news'> News </NavLink>
-          <p>/</p>
-          <p>Detail: {id}</p>
-        </div>
-      </div> */}
-      <div className='TNews'>
+      <MySwiper />
+      <div className='news-container'>
         <div className='newsD'>
           {newsItem ? (
-            <div key={newsItem.id}>
+            <div key={newsItem.id} >
               <img src={newsItem.image} alt={newsItem.title} />
               <h1>{newsItem.title}</h1>
               <p>{newsItem.Description}</p>

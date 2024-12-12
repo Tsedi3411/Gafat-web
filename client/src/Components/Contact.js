@@ -5,7 +5,6 @@ import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome
 
 
 import { Link, NavLink } from 'react-router-dom'
-import MapComponent from './MapComponenet'
 import ContactForm from './ContactForm'
 import Chatbot from './Chatbot';
 import LocationMap from './LocationMap';
@@ -33,25 +32,24 @@ function Contact() {
       <div className='cont-upper'>
         <i className="fa fa-phone"></i>
         <h3>FOR SHARE INFORMATION</h3>
-        <ul>
+        <ul className='info-list'>
           <li><Link to='+251-927-889-723'>+251-913-152-743</Link></li>
-          <li><Link to='+251-961-749-765'>+251-913-152-743</Link></li>
-          <li><Link to='+251-934-329-193'>+251-913-152-743</Link></li>
+          <li><Link to='+251-961-749-765'>+251-908-333-377</Link></li>
+        
         </ul>
         <h3>FOR General INFORMATION</h3>
-        <ul>
-          <li><Link to='+251-921-229-726'>+251-911-997-390</Link></li>
-          <li><Link to='+251-933-999-325'>+251-912-642-890</Link></li>
-          <li><Link to='+251-988-219-013'>+251-118-682-211</Link></li>
+        <ul className='info-list'>
+        <li><Link to='+251-927-889-723'>+251-913-152-743</Link></li>
+        <li><Link to='+251-961-749-765'>+251-908-333-377</Link></li>
         </ul>
       </div>
       <div className=' cont-upper'>
         <i className="fa fa-envelope"></i>
         <h3>EMAIL</h3>
-        <ul>
-          <li><p>Managment</p>:<Link to='abebe@gmail.com'>gafatsecure@gmail.com</Link></li>
-          <li><p>Sales</p>:<Link to='alemu@gmail.com'>alemu@gmail.com</Link></li>
-          <li><p>Support</p>:<Link to='kidan@gmail.com'>kidan@gmail.com</Link></li>
+        <ul className='info-list'>
+          <li><p>Managment:</p> <Link to='abebe@gmail.com'>gafatsecure@gmail.com</Link></li>
+          <li><p>Sales:</p> <Link to='alemu@gmail.com'>alemu@gmail.com</Link></li>
+          <li><p>Support:</p> <Link to='kidan@gmail.com'>kidan@gmail.com</Link></li>
         </ul>
       </div>
     </div>

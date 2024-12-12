@@ -22,9 +22,8 @@ const ContactForm = () => {
         event.preventDefault();
         console.log('Form submitted:', formData);
         setSubmitted(true);
-        setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Clear form after submission
+        setFormData({ firstName: '', lastName: '', email: '', message: '' }); 
     };
-
     return (
         <div className="form-container">
             <h1>Contact Us</h1>

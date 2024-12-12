@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './partners.css';
 import './about.css'; // Keep only one import
-import ImageSlider from './ImageSlider';
+
 
 import pab from '../assets/pab.png';
 import pad from '../assets/pad.png';
@@ -11,20 +11,9 @@ import pen from '../assets/pen.png';
 import pro from '../assets/pro.png';
 import pwuc from '../assets/pwuc.png';
 
-import sg from '../assets/police3.jpg';
-import a from '../assets/abay-bank.jpg';
-import ab from '../assets/Abyssinia-bank.png';
-import an from '../assets/anbesa-bank.png';
-import b from '../assets/bherawi.jpg';
-import bu from '../assets/buna-bank.png';
-import e from '../assets/Enat-bank.jpg';
-import k from '../assets/keyizen.jpg';
-import o from '../assets/oromya-bank.png';
-import t from '../assets/tsedey.png';
-import { NavLink } from 'react-router-dom';
 import Chatbot from './Chatbot';
-import MySwiper from './Swip';
 import Pimages from './Pimages';
+import ProductShow from './ProductShow';
 
 function Partners() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -56,8 +45,7 @@ function Partners() {
 
     return (
         <>
-            {/* <ImageSlider images={images} /> */}
-            <MySwiper />
+            <ProductShow />
             <div className='partners'>
                 <div className='part-1'>
                     <h1>Our Partners</h1>
@@ -79,8 +67,11 @@ function Partners() {
                         <img src={pwuc} alt='' className='part-mr' onClick={() => handleImageClick(pwuc)} />
                     </div>
                 </div>
-                </div>
+            </div>
             <Pimages />
+            <div className='join-us'>
+                <p> Join us on this exciting journey where you’ll have the opportunity to shape workplace cultures, drive talent development, and help individuals thrive in their careers.</p>
+            </div>
             <Chatbot />
         </>
     );

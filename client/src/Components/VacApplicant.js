@@ -57,19 +57,52 @@ const VacApplicant = () => {
         }
     };
 
-    const onFinish = async (values) => {
-        const combinedValues = { ...pageOneValues, ...values }; // Combine values from both pages
-        console.log('Submitting:', combinedValues);
+    // const onFinish = async (values) => {
+    //     const combinedValues = { ...pageOneValues, ...values }; // Combine values from both pages
+    //     console.log('Submitting:', combinedValues);
+    //     try {
+    //         // Send a POST request to your backend
+    //         const response = await axios.post('https://your-backend-api.com/endpoint', combinedValues);
+    //         message.success('Form submitted successfully!');
+    //         console.log('Response:', response.data);
+    //     } catch (error) {
+    //         console.error('Error submitting form:', error);
+    //         message.error('Failed to submit form. Please try again.');
+    //     }
+    // };
+
+    const [applicationData, setApplicationData] = useState({
+        dateOfBirth: '',
+        sex: '',
+        nationality: '',
+        city: '',
+        sibcity: '',
+        wereda: '',
+        kebele: '',
+        houseNo: '',
+        phone: '',
+        email: '',
+        otherPhone: '',
+        vacancy: '',
+        fullNameEnglish: '',
+        fullName: ''
+    });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setApplicationData({ ...applicationData, [name]: value });
+    }
+    const onFinish = async (e) => {
+        e.preventDefault();
         try {
-            // Send a POST request to your backend
-            const response = await axios.post('https://your-backend-api.com/endpoint', combinedValues);
-            message.success('Form submitted successfully!');
-            console.log('Response:', response.data);
+            const response = await axios.post('http://5.75.167.208:8080/vacancy/addapplicant', applicationData);
+            console.log('Applicant Added Successfully', response.data)
         } catch (error) {
-            console.error('Error submitting form:', error);
-            message.error('Failed to submit form. Please try again.');
+            console.log('error add applicant', error)
         }
-    };
+
+
+    }
+
 
     return (
         <Form
@@ -97,7 +130,8 @@ const VacApplicant = () => {
                 }}>
                     <Form.Item
                         label="ሙሉ ስም"
-                        name="name"
+                        name="fullName"
+                        onChange={handleChange}
                         rules={[{ required: true, message: 'Please enter your Name' }]}
                     >
                         <Input />
@@ -105,7 +139,8 @@ const VacApplicant = () => {
 
                     <Form.Item
                         label="Name"
-                        name="ename"
+                        name="fullNameEnglish"
+                        onChange={handleChange}
                         rules={[{ required: true, message: 'Please enter your Name' }]}
                     >
                         <Input />
@@ -115,14 +150,15 @@ const VacApplicant = () => {
                     <Form.Item
                         label="Birth Date"
                         type="date"
-                        name="birthDate"
+                        name="dateOfBirth"
+                        onChange={handleChange}
                         rules={[{ required: true, message: 'Please select your birth date!' }]}
-                        style={{ display: 'flex', flexDirection: 'column', alignItems: 'right', color: 'black'}} 
+                        style={{ display: 'flex', flexDirection: 'column', alignItems: 'right', color: 'black' }}
                     >
                         <DatePicker
                             format="YYYY-MM-DD"
-                            style={{ width: '100%', maxWidth: '300px', color: 'black'}}
-                            
+                            style={{ width: '100%', maxWidth: '300px', color: 'black' }}
+
                         />
                     </Form.Item>
 
@@ -135,13 +171,13 @@ const VacApplicant = () => {
                         <Upload
                             name="logo"
                             listType="picture"
+
                             fileList={fileList}
                             onChange={handleUploadChange}
                             beforeUpload={file => {
-                                // Optionally handle file validation here
-                                return true; // Allow the upload
+                                return true; 
                             }}
-                            action="https://your-file-upload-endpoint.com/upload" // Your upload endpoint
+                            action="http://5.75.167.208:8080/vacancy/addapplicant  " // Your upload endpoint
                         >
                             <Button icon={<UploadOutlined />}>Click to upload</Button>
                         </Upload>
@@ -149,7 +185,8 @@ const VacApplicant = () => {
 
                     <Form.Item
                         label="Gender"
-                        name="gender"
+                        onChange={handleChange}
+                        name="sex"
                         rules={[{ required: true, message: 'Please select your gender!' }]}
                     >
                         <Select>
@@ -160,6 +197,7 @@ const VacApplicant = () => {
 
                     <Form.Item
                         name="nationality"
+                        onChange={handleChange}
                         label="Nationality"
                         rules={[{ required: true, message: 'Please select your nationality!' }]}
                     >
@@ -169,7 +207,6 @@ const VacApplicant = () => {
                             <Option value="kenya">Kenya</Option>
                         </Select>
                     </Form.Item>
-
                     <Button
                         type="primary"
                         onClick={nextPage}
@@ -183,9 +220,7 @@ const VacApplicant = () => {
             {currentPage === 1 && (
                 <Card size="small" title="Address Information"
                     style={{
-
                         maxWidth: 900,
-
                     }}
 
                 >
@@ -193,6 +228,7 @@ const VacApplicant = () => {
                         <Col span={15}>
                             <Form.Item
                                 label="City/Region"
+                                onChange={handleChange}
                                 name="city"
                                 rules={[{ required: true, message: 'Please enter your city/region!' }]}
                             >
@@ -202,7 +238,8 @@ const VacApplicant = () => {
                         <Col span={15}>
                             <Form.Item
                                 label="Subcity/Zone"
-                                name="subcity"
+                                onChange={handleChange}
+                                name="subCity"
                                 rules={[{ required: true, message: 'Please enter your subcity/zone!' }]}
                             >
                                 <Input />
@@ -215,6 +252,7 @@ const VacApplicant = () => {
                         <Col span={10}>
                             <Form.Item
                                 label="Wereda"
+                                onChange={handleChange}
                                 name="wereda"
                                 rules={[{ required: true, message: 'Please enter your wereda!' }]}
                             >
@@ -224,6 +262,7 @@ const VacApplicant = () => {
                         <Col span={10}>
                             <Form.Item
                                 label="Kebele"
+                                onChange={handleChange}
                                 name="kebele"
                                 rules={[{ required: true, message: 'Please enter your kebele!' }]}
                             >
@@ -236,7 +275,8 @@ const VacApplicant = () => {
                         <Col span={15}>
                             <Form.Item
                                 label="House No"
-                                name="houseNumber"
+                                onChange={handleChange}
+                                name="houseNo"
                             >
                                 <Input />
                             </Form.Item>
@@ -244,6 +284,7 @@ const VacApplicant = () => {
                         <Col span={12}>
                             <Form.Item
                                 label="Phone"
+                                onChange={handleChange}
                                 name="phone"
                                 rules={[{ required: true, message: 'Please enter your phone number!' }]}
                             >
@@ -256,7 +297,8 @@ const VacApplicant = () => {
                         <Col span={15}>
                             <Form.Item
                                 label="Alternate Ph"
-                                name="alternatePhone"
+                                onChange={handleChange}
+                                name="otherPhone"
                                 rules={[{ required: false }]}
                             >
                                 <Input />
@@ -265,6 +307,7 @@ const VacApplicant = () => {
                         <Col span={15}>
                             <Form.Item
                                 name="email"
+                                onChange={handleChange}
                                 label="Email"
                                 rules={[{ required: false }]}
                             >
@@ -272,14 +315,6 @@ const VacApplicant = () => {
                             </Form.Item>
                         </Col>
                     </Row>
-                    {/* <Form.Item
-                        name="email"
-                        label="Email"
-                        rules={[{ type: 'email', message: 'Please enter a valid email!' }]}
-                    >
-                        <Input />
-                    </Form.Item> */}
-
                     <Button type="default" onClick={prevPage} style={{ width: 200, display: 'block', margin: '0 auto' }}>
                         Previous
                     </Button>

@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import im11 from '../assets/logo.jpg'
 import im22 from '../assets/gafatS.jpg'
 import im33 from '../assets/in.jpg'
-
-import './ImageSlider.css'; // Make sure to create this CSS file
+ // Make sure to create this CSS file
 
 const images = [
     {

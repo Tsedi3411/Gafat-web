@@ -16,24 +16,13 @@ import { FaBalanceScale } from "react-icons/fa";
 import './home.css'
 import './about.css'
 
-import a from '../assets/abay-bank.jpg'
-import ab from '../assets/Abyssinia-bank.png'
-import an from '../assets/anbesa-bank.png'
-import b from '../assets/bherawi.jpg'
-import bu from '../assets/buna-bank.png'
-import e from '../assets/Enat-bank.jpg'
-import k from '../assets/keyizen.jpg'
-import o from '../assets/oromya-bank.png'
-import t from '../assets/tsedey.png'
-
-import ProductShow from './ProductShow';
 
 import CardList from './Card';
 import { NavLink } from 'react-router-dom';
-// import ImageSlider from './Hnews';
 import Countable from './Countable';
 import Chatbot from './Chatbot';
 import Pimages from './Pimages';
+import MySwiper from './Swip';
 
 
 
@@ -72,11 +61,7 @@ function Home() {
 
 
   return (<>
-
-
-
-
-    <ProductShow />
+    <MySwiper />
     <Countable />
 
     <div className='home'>
@@ -151,7 +136,7 @@ function Home() {
         <div className='mddd-1'>
           <div className='mdd1'>
             <button> <FaPhone size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px'}} />0913152743</button>
-            <button><FaPhone size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px' }} />0118682211</button>
+            <button><FaPhone size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px' }} />0908333377</button>
           </div>
           <div className='mddd1'>
           <button> <FaEnvelope size={15} color="rgba(0,128,0,0.7)" style={{ margin: '0 20px' }} />info@gafatsecurity.com</button>

@@ -73,7 +73,7 @@
     }
 
     .nav-links a{
-        color: rgba(164,136,46,0.9);
+        color: white;
     }
 
     .nav-links.show {
@@ -96,5 +96,5 @@
   
   .header-scroll.scrolled {
     background-color: white;
-    color:black;
+    color:rgba(7, 225, 7, 0.9);
   }

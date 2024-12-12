@@ -1,27 +1,21 @@
 .amount {
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin-top: 40px;
     margin-bottom: 40px;
-    background-color: white;
     flex-direction: column;
 }
-
 .amount h1{
-    color: rgba(0,128,0,0.9);
+    color: rgba(43, 156, 43, 0.9);
 }
-
-
 .am11 {
     display: flex;
     flex-direction: row;
     color: rgb(164, 136, 46);
     gap: 50px;
 }
-
 @media (max-width: 768px) {
     .amount {
         display: flex;
@@ -49,10 +43,9 @@
     to{
        opacity: 1;
        clip-path: inset(0 0 0 0);
-    }
-    
+    }  
 }
-.amount{
+.am11{
    animation: appear 5s linear;
    animation-timeline: view();
    animation-range: entry 0% cover 40%;

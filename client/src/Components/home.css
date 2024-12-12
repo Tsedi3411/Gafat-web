@@ -443,12 +443,9 @@
 }
 
 .vision-reality {
-    /* width: 100%; */
     text-align: center;
     background: none;
-    box-shadow: none;
-    /* padding: 20px; */
-    
+    box-shadow: none;  
 }
 
 .vision-reality h3 {
@@ -610,6 +607,27 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .vision-reality {
+        height: auto;
+        padding: 15px; 
+    }
+    .vision-reality h3 {
+        font-size: 1.5rem; 
+    }
+
+    .vision-reality p {
+        font-size: 0.9rem; 
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .vision-reality {
+        height: auto;
+        padding: 15px; 
+    }
     .vision-reality h3 {
         font-size: 1.5rem; 
     }
@@ -623,6 +641,7 @@ button:hover {
     }
 }
 
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -630,6 +649,40 @@ button:hover {
 
     to {
         opacity: 1;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .vision-reality {
+        height: auto;
+        padding: 15px; 
+    }
+    .vision-reality h3 {
+        font-size: 1.5rem; 
+    }
+
+    .vision-reality p {
+        font-size: 0.9rem; 
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .vision-reality {
+        height: auto;
+        padding: 15px; 
+    }
+    .vision-reality h3 {
+        font-size: 1.5rem; 
+    }
+
+    .vision-reality p {
+        font-size: 0.9rem; 
+    }
+
+    button {
+        padding: 10px 20px;
     }
 }
 

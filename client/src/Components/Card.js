@@ -2,42 +2,61 @@ import React from 'react'
 import { Card, Row, Col, Button } from 'antd';
 import './card.css'
 
-import image1 from '../assets/police2.jpg'
-import image2 from '../assets/police3.jpg'
-import image3 from '../assets/training.jpg'
-import image4 from '../assets/cS.jpg'
+import service1 from '../assets/plice1.jpg';
+import service2 from '../assets/patroll.jpg';
+import service3 from '../assets/police3.jpg';
+
+import g1 from '../assets/training.jpg'
+import g2 from '../assets/Sserv.png'
+import g3 from '../assets/straining.jpg'
+// import clean from '../assets/ssss.jpg'
+
+// import image1 from '../assets/police2.jpg'
+// import image2 from '../assets/police3.jpg'
+// import image3 from '../assets/training.jpg'
+// import image4 from '../assets/cS.jpg'
+import { useNavigate } from 'react-router-dom';
 
 
 const { Meta } = Card;
 function CardList() {
- 
+  const navigate = useNavigate()
 
-  const slides = [
+  const services = [
     {
-      id:1,
-      image: image1,
-      title: 'Security Service',
-      description: 'Trained security guards monitor premises, control access, and respond to incidents.',
+      id: 1,
+      image: service1,
+      title: "Guard",
+      content: 'Static',
+      description: '',
+      link: '/provide',
     },
     {
-      id:2,
-      image: image2,
-      title: 'Human Resources Service',
-      description: 'Establishing systems for evaluating employee performance, including feedback.',
+      id: 2,
+      image: service2,
+      title: "Mobile Patrol",
+      content: 'Patrol',
+      link: '/provide',
+      description: ''
     },
     {
-      id:3,
-      image: image3,
-      title: 'Training & Consultancy HR & Security Service',
-      description: 'Providing personal protection for individuals at risk due to their occupation or public profile.',
+      id: 3,
+      image: service3,
+      title: "Mining Security",
+      content: 'Security',
+      link: '/provide',
+      description: ''
     },
+
     {
-      id:4,
-      image: image4,
-      title: 'Cleaning Service',
-      description: ': Routine cleaning tasks such as dusting, vacuuming, mopping, and bathroom sanitation.',
-     
-    },
+      id: 4,
+      image: g1,
+      title: "Training",
+      content: 'Advanced Security',
+      link: '/provide',
+      description: ''
+    }
+
   ];
 
   return (
@@ -45,9 +64,9 @@ function CardList() {
       <div className='upper-cl'>
         <h1>Service We Provide</h1>
       </div>
-      <div className='loweer-cl'>
+      <div className='loweer-cl' >
         <Row gutter={16}>
-          {slides.map((card) => (<div className='colsr'>
+          {services.map((card) => (<div className='colsr'>
             <Col span={8} key={card.id}>
               <Card
                 hoverable
@@ -55,7 +74,12 @@ function CardList() {
                 cover={<img alt={card.title} src={card.image} />}
               >
                 <Meta title={card.title} description={card.description} />
-                {/* <NavLink to='/servicedetail/:id'><Button>Read More</Button></NavLink> */}
+                <Button onClick={() => {
+                  navigate(`${card.link}`, { state: { id: card.id } }); window.scrollTo({
+                    top: 0,
+                    behavior: 'instant', // Use 'auto' for an instant scroll without animation
+                  });
+                }}>Read More</Button>
               </Card>
             </Col>
           </div>))}

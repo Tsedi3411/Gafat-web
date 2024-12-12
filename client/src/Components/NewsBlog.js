@@ -1,6 +1,5 @@
 import React from 'react'
 import './news.css'
-import sg from '../assets/news.jpg'
 import './detail.css'
 import './about.css'
 import gs from '../assets/police3.jpg'
@@ -43,16 +42,6 @@ function NewsBlog() {
       link: '/newsBlog/detail/3',
     },
   ]
-
-  // const { id } = useParams()
-
-  // useEffect(() => {
-  //   // Set the latest news on component mount
-  //   if (neews.length > 0) {
-  //     setLatestNews(neews[neews.length - 1]);
-  //   }
-  // }, [neews, setLatestNews]);
-
   return (
     <>
       <div className='news'>
