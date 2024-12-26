@@ -97,7 +97,12 @@ function Home() {
     <div className='last-vacancy'>
       <h3>Latest Vacancies</h3>
       <p>Currently we have around <button className='btn1'>5</button>jobsAvailable on different position</p>
-      <NavLink to='/vacancy' > <button className='btn2'>VIEW MORE JOBS AND APPLY</button></NavLink>
+      <NavLink to='/vacancy' > <button className='btn2' onClick={()=>{
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'instant',
+                });
+              }}>VIEW MORE JOBS AND APPLY</button></NavLink>
     </div>
     
     

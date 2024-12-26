@@ -41,7 +41,7 @@ body {
 
 .mySwiper {
     position: relative;
-    height: 700px;
+    height: 100%;
     overflow: hidden;
 }
 

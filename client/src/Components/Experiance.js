@@ -1,9 +1,11 @@
 import React from 'react'
 import './experiance.css'
+import {Image} from 'antd'
 
 import a from '../assets/police2.jpg'
 import b from '../assets/police3.jpg'
-import c from '../assets/plice1.jpg'
+import c from '../assets/ss1.jpg'
+import dcc from '../assets/b1.jpg'
 import Chatbot from './Chatbot'
 
 function Experiance() {
@@ -22,20 +24,20 @@ function Experiance() {
         </div>
         <div className='lower-exp'>
              <div className='lower-one'>
-                <img src={a} alt='' />
+                <Image src={a} alt='' style={{height:200, width:200}}/>
                 <p>Teamwork For Success</p>
              </div>
              <div className='lower-one'>
-             <img src={b} alt='' />
+             <Image src={b} alt=''style={{height:200, width:200}} />
               <p>Principles For Mutual Benefit</p>
              </div>
              <div className='lower-one'>
-             <img src={c} alt='' />
+             <Image src={c} alt='' style={{height:200, width:200}}/>
               <p>We Are Law Abiding
               </p>
              </div>
              <div className='lower-one'>
-             <img src={c} alt='' />
+             <Image src={dcc} alt=''style={{height:200, width:200}} />
               <p>Our Existence Is Our Human Resources
                    </p>
              </div>

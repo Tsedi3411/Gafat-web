@@ -1,10 +1,12 @@
 import React from 'react'
 import './footer.css'
 import logo from '../assets/logo.jpg'
-import im11 from '../assets/forOp.jpg'
-import im21 from '../assets/forOp.jpg'
-import im31 from '../assets/forOp.jpg'
-import im41 from '../assets/forOp.jpg'
+import im11 from '../assets/bc1.jpg'
+import im21 from '../assets/bc2.jpg'
+import im31 from '../assets/ss2.jpg'
+import im41 from '../assets/bc4.jpg'
+import im42 from '../assets/bc5.jpg'
+import im43 from '../assets/bc6.jpg'
 
 import { FaPhone } from 'react-icons/fa';
 import { FaEnvelope, FaAddressBook } from 'react-icons/fa';
@@ -32,7 +34,20 @@ function Footer() {
               is to maintain your privacy and confidentiality at all times, while providing you with the service you require.</p>
           </div>
           <div className='upf-12'>
-            <h3> <FaAddressBook size={20} color="green" style={{ margin: '0 20px' }} />Contact Us</h3>
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'instant',
+                });
+                window.location.href = './contact'; // Navigate to the contact page
+              }}
+            >
+              <h3>
+                <FaAddressBook size={20} color="green" style={{ margin: '0 0' }} />
+                Contact Us
+              </h3>
+            </button>
             <div className='hm'>
               <p>Ethiopia, Addis Ababa, Kirkos Sub-City, Woreda 4, House No. 374</p>
             </div>
@@ -41,7 +56,7 @@ function Footer() {
               <div>
                 <p>0908333377</p>
                 <p>0913152743</p>
-                
+
                 <p> infoFax : +251 114-70 68 32</p>
               </div>
 
@@ -65,8 +80,8 @@ function Footer() {
             </div>
             <div className='up-1333'>
               <Image width={100} height={100} src={im41} alt='fifth pic' />
-              <Image width={100} height={100} src={im31} alt='forth pic' />
-              <Image width={100} height={100} src={im41} alt='fifth pic' />
+              <Image width={100} height={100} src={im42} alt='forth pic' />
+              <Image width={100} height={100} src={im43} alt='fifth pic' />
             </div>
             {/* <form action='' method='' >
               <input type='text' placeholder='Your Name' />

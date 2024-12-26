@@ -6,66 +6,67 @@ import './news.css'
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
 import axios from 'axios';
+import SwipeVacancy from './SwipeVacancy';
 
 function Vac() {
   // const vacancies = [
-  //   {
-  //     id: 1,
-  //     branch: 'New York',
-  //     department: 'Engineering',
-  //     position: 'Software Engineer',
-  //     title: 'Senior Software Engineer',
-  //     vacancyType: 'Full-time',
-  //     employment: 'Permanent',
-  //     minAge: 25,
-  //     maxAge: 35,
-  //     gender: 'Any',
-  //     sector: 'IT',
-  //     experience: '3-5 years',
-  //     vacancy: 2,
-  //     salary: '$80,000 - $100,000',
-  //     deadline: '2024-12-31',
-  //     description: 'We are looking for a skilled software engineer to join our team.',
-  //     link: '/vacancy/detail/1',
-  //   },
-  //   {
-  //     id: 2,
-  //     branch: 'Los Angeles',
-  //     department: 'Marketing',
-  //     position: 'Marketing Specialist',
-  //     title: 'Digital Marketing Specialist',
-  //     vacancyType: 'Part-time',
-  //     employment: 'Contract',
-  //     minAge: 22,
-  //     maxAge: 30,
-  //     gender: 'Any',
-  //     sector: 'Marketing',
-  //     experience: '1-3 years',
-  //     vacancy: 1,
-  //     salary: '$40,000 - $50,000',
-  //     deadline: '2024-11-30',
-  //     description: 'Looking for a creative marketing specialist to enhance our online presence.',
-  //     link: '/vacancy/detail/2',
-  //   },
-  //   {
-  //     id: 3,
-  //     branch: 'Los Angeles',
-  //     department: 'Marketing',
-  //     position: 'Marketing Specialist',
-  //     title: 'Social Media Manager',
-  //     vacancyType: 'Part-time',
-  //     employment: 'Contract',
-  //     minAge: 22,
-  //     maxAge: 30,
-  //     gender: 'Any',
-  //     sector: 'Marketing',
-  //     experience: '1-3 years',
-  //     vacancy: 1,
-  //     salary: '$40,000 - $50,000',
-  //     deadline: '2024-11-30',
-  //     description: 'Looking for a creative social media manager to enhance our online presence.',
-  //     link: '/vacancy/detail/3',
-  //   },
+    // {
+    //   id: 1,
+    //   branch: 'New York',
+    //   department: 'Engineering',
+    //   position: 'Software Engineer',
+    //   title: 'Senior Software Engineer',
+    //   vacancyType: 'Full-time',
+    //   employment: 'Permanent',
+    //   minAge: 25,
+    //   maxAge: 35,
+    //   gender: 'Any',
+    //   sector: 'IT',
+    //   experience: '3-5 years',
+    //   vacancy: 2,
+    //   salary: '$80,000 - $100,000',
+    //   deadline: '2024-12-31',
+    //   description: 'We are looking for a skilled software engineer to join our team.',
+    //   link: '/vacancy/detail/1',
+    // },
+    // {
+    //   id: 2,
+    //   branch: 'Los Angeles',
+    //   department: 'Marketing',
+    //   position: 'Marketing Specialist',
+    //   title: 'Digital Marketing Specialist',
+    //   vacancyType: 'Part-time',
+    //   employment: 'Contract',
+    //   minAge: 22,
+    //   maxAge: 30,
+    //   gender: 'Any',
+    //   sector: 'Marketing',
+    //   experience: '1-3 years',
+    //   vacancy: 1,
+    //   salary: '$40,000 - $50,000',
+    //   deadline: '2024-11-30',
+    //   description: 'Looking for a creative marketing specialist to enhance our online presence.',
+    //   link: '/vacancy/detail/2',
+    // },
+    // {
+    //   id: 3,
+    //   branch: 'Los Angeles',
+    //   department: 'Marketing',
+    //   position: 'Marketing Specialist',
+    //   title: 'Social Media Manager',
+    //   vacancyType: 'Part-time',
+    //   employment: 'Contract',
+    //   minAge: 22,
+    //   maxAge: 30,
+    //   gender: 'Any',
+    //   sector: 'Marketing',
+    //   experience: '1-3 years',
+    //   vacancy: 1,
+    //   salary: '$40,000 - $50,000',
+    //   deadline: '2024-11-30',
+    //   description: 'Looking for a creative social media manager to enhance our online presence.',
+    //   link: '/vacancy/detail/3',
+    // },
   // ];
 
   const [selectedPosition, setSelectedPosition] = useState('');
@@ -109,8 +110,8 @@ function Vac() {
     fetchVacancies();
   }, []);
 
-  return (<>
-    <MySwiper />
+  return (<> 
+    {/* <SwipeVacancy /> */}
 
 
     <div className='Vac'>
@@ -147,7 +148,7 @@ function Vac() {
             <p>{item.minAge}</p>
             <p>{item.maxAge}</p>
             <p>{item.sector}</p>
-            <NavLink to={`/vacancy/detail/${item.IDNO}`}>
+            <NavLink to={`/vacancy/detail/${item.IDNO}`} >
               <button>Read More</button>
             </NavLink>
           </div>

@@ -10,6 +10,7 @@ import Provide from './Provide '
 import Experiance from './Experiance'
 import Chatbot from './Chatbot';
 import MySwiper from './Swip';
+import SwipeService from './SwipeService'
 
 
 
@@ -22,7 +23,7 @@ function Service() {
     // Add more images as needed
   ];
   return (<>
-   <MySwiper />
+   <SwipeService/>
     <Provide />
     <Experiance />
     <Chatbot />

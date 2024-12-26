@@ -1,20 +1,15 @@
 import React from 'react'
-import { Card, Row, Col, Button } from 'antd';
+import { Card, Row, Col, Button, Image } from 'antd';
 import './card.css'
 
-import service1 from '../assets/plice1.jpg';
+import service1 from '../assets/bb1.jpg';
 import service2 from '../assets/patroll.jpg';
-import service3 from '../assets/police3.jpg';
+import service3 from '../assets/pp3.jpg';
 
 import g1 from '../assets/training.jpg'
 import g2 from '../assets/Sserv.png'
 import g3 from '../assets/straining.jpg'
-// import clean from '../assets/ssss.jpg'
 
-// import image1 from '../assets/police2.jpg'
-// import image2 from '../assets/police3.jpg'
-// import image3 from '../assets/training.jpg'
-// import image4 from '../assets/cS.jpg'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -26,7 +21,7 @@ function CardList() {
     {
       id: 1,
       image: service1,
-      title: "Guard",
+      title: "Guard service",
       content: 'Static',
       description: '',
       link: '/provide',
@@ -42,7 +37,7 @@ function CardList() {
     {
       id: 3,
       image: service3,
-      title: "Mining Security",
+      title: "Bank Security",
       content: 'Security',
       link: '/provide',
       description: ''
@@ -67,17 +62,24 @@ function CardList() {
       <div className='loweer-cl' >
         <Row gutter={16}>
           {services.map((card) => (<div className='colsr'>
-            <Col span={8} key={card.id}>
+            <Col
+              xs={24}
+              sm={12}
+              md={12}
+              lg={6}
+              span={8} key={card.id}>
               <Card
                 hoverable
-                style={{ width: 240 }}
-                cover={<img alt={card.title} src={card.image} />}
+
+                style={{ width: 240,height:300, marginBottom: 16 }}
+                cover={<Image alt={card.title} src={card.image} 
+                style={{height:200}}/>}
               >
                 <Meta title={card.title} description={card.description} />
                 <Button onClick={() => {
                   navigate(`${card.link}`, { state: { id: card.id } }); window.scrollTo({
                     top: 0,
-                    behavior: 'instant', // Use 'auto' for an instant scroll without animation
+                    behavior: 'instant',
                   });
                 }}>Read More</Button>
               </Card>

@@ -5,20 +5,15 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuVisible(prevState => !prevState);
   };
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    if (scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    setIsScrolled(scrollY > 50);
   };
 
   useEffect(() => {
@@ -27,6 +22,13 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <div className={`header-scroll ${isScrolled ? 'scrolled' : ''}`}>
@@ -39,18 +41,17 @@ function Header() {
             &#9776;
           </div>
           <div className={`nav-links ${isMenuVisible ? 'show' : ''}`}>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/about'>About Us</NavLink>
-            <NavLink to='/service'>Our Service</NavLink>
-            <NavLink to='/partner'>Award and Partner</NavLink>
-            <NavLink to='/news'>News and Blogs</NavLink>
+            <NavLink to='/' onClick={handleScrollToTop}>Home</NavLink>
+            <NavLink to='/about' onClick={handleScrollToTop}>About Us</NavLink>
+            <NavLink to='/service' onClick={handleScrollToTop}>Our Service</NavLink>
+            <NavLink to='/partner' onClick={handleScrollToTop}>Award and Partner</NavLink>
+            <NavLink to='/news' onClick={handleScrollToTop}>News and Blogs</NavLink>
           </div>
         </div>
         <div className='right-header'>
-          <NavLink to='/contact'>Contact Us</NavLink>
-          <NavLink to='/vacancy'>Vacancies</NavLink>
+          <NavLink to='/contact' onClick={handleScrollToTop}>Contact Us</NavLink>
+          <NavLink to='/vacancy' onClick={handleScrollToTop}>Vacancies</NavLink>
         </div>
-
       </div>
     </div>
   );

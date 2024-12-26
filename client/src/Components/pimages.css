@@ -55,8 +55,5 @@
     .Swiper {
         flex-direction: column; 
     }
-    .swiper-image img{
-        height: 10px; 
-        width: 20px;
-    }
+   
 }

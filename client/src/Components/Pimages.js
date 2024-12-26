@@ -47,69 +47,69 @@ export default function Pimages() {
             className="Swiper"
           >
 
-            <SwiperSlide><img className="swiper-image" src={a} alt=''   style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={a} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
             <SwiperSlide><img className="swiper-image" src={ab} alt='' style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }}/></SwiperSlide>
-            <SwiperSlide><img className="swiper-image" src={an} alt=''  style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }}/></SwiperSlide>
-            <SwiperSlide><img className="swiper-image" src={b} alt=''  style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }}/></SwiperSlide>
-            <SwiperSlide><img className="swiper-image" src={bu} alt=''  style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }} /></SwiperSlide>
-            <SwiperSlide><img className="swiper-image" src={e} alt=''  style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }}/></SwiperSlide>
-            <SwiperSlide><img className="swiper-image" src={k} alt=''  style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }}/></SwiperSlide>
-            <SwiperSlide><img className="swiper-image" src={o} alt=''  style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }}/></SwiperSlide>
-            <SwiperSlide><img className="swiper-image" src={t} alt=''  style={{
-            maxWidth: '60%', 
-            height: 'auto',  
-            borderRadius: '50%', 
-            display: 'block',
-            margin: '0 auto' 
-        }}/></SwiperSlide>
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={an} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={b} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={bu} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={e} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={k} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={o} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
+            <SwiperSlide><img className="swiper-image" src={t} alt='' style={{
+              maxWidth: '60%',
+              height: 'auto',
+              borderRadius: '50%',
+              display: 'block',
+              margin: '0 auto'
+            }} /></SwiperSlide>
           </Swiper>
         </div>
         <style jsx>{`
@@ -147,8 +147,8 @@ export default function Pimages() {
               padding: 50px; 
             }
             .swiper-image {
-              width: 20px; 
-              height: 20px; 
+              width: 40px; 
+              height: 40px; 
               margin-left: 10px; 
             }
           }
@@ -159,8 +159,8 @@ export default function Pimages() {
               padding: 30px; 
             }
             .swiper-image {
-              width: 20px; 
-              height: 20px; 
+              width: 40px; 
+              height: 40px; 
             }
           }
       `}</style>

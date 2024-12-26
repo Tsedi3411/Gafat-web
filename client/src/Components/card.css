@@ -3,11 +3,11 @@
     align-items: center;
     justify-content: center;
     background: white;
-    background-image: url('../assets/ssss.jpg');
+    background-image: url('../assets/s11.jpg');
     background-attachment: fixed;
     background-size: cover;
     /* background-repeat: no-repeat; */
-    height: 700px;
+    height: 1000px;
     flex-direction: column;
     gap: 100px;
 }
@@ -114,6 +114,66 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 834px) {
+    .card-list {
+        height: 300px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .upper-cl {
+        padding: 20px 30px;
+    }
+
+    .lower-cl {
+        gap: 50px;
+    }
+
+    .lower-cl .colsr {
+        gap: 50px;
+    }
+
+    .colsr img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Landscape tablets */
+@media (min-width: 1024px) and (max-width: 1366px) {
+       .card-list {
+        height: 300px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .upper-cl {
+        padding: 20px 30px;
+    }
+
+    .lower-cl {
+        gap: 50px;
+    }
+
+    .lower-cl .colsr {
+        gap: 50px;
+    }
+
+    .colsr img {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px){
+    .card-list{
+        height: 550px;
     }
 }
 

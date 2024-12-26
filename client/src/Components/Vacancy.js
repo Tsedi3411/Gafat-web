@@ -43,23 +43,23 @@ const Vacancy = () => {
 
   return (
     <>
-       <MySwiper />
+       {/* <MySwiper /> */}
 
       <h1>Vacancy Details</h1>
       {vacancy ? (
         <div className="vacancy-detail">
           <h2>{vacancy.title}</h2>
-          <p><strong>VacancyID:</strong> {vacancy.IDNO}</p>
           <p><strong>Branch:</strong> {vacancy.branchName}</p>
           <p><strong>Department:</strong> {vacancy.departmentName}</p>
           <p><strong>Position:</strong> {vacancy.positionName}</p>
           <p><strong>Vacancy Type:</strong> {vacancy.vacancyType}</p>
-          <p><strong>Employment:</strong> {vacancy.employment}</p>
-          <p><strong>Min Age:</strong> {vacancy.minAge} - <strong>Max Age:</strong> {vacancy.maxAge}</p>
+          <p><strong>Employment Type:</strong> {vacancy.employementType}</p>
+          <p><strong>Min-Age:</strong>{vacancy.minAge}</p>
+          <p><strong>Max-Age:</strong> {vacancy.maxAge}</p>
           <p><strong>Gender:</strong> {vacancy.gender}</p>
           <p><strong>Sector:</strong> {vacancy.sector}</p>
           <p><strong>Experience:</strong> {vacancy.experience}</p>
-          <p><strong>Vacancy:</strong> {vacancy.vacancy}</p>
+          <p><strong>Vacancy:</strong> {vacancy.vacancyNo}</p>
           <p><strong>Salary:</strong> {vacancy.salary}</p>
           <p><strong>Deadline:</strong> {vacancy.deadline}</p>
           <p><strong>Description:</strong> {vacancy.description}</p>

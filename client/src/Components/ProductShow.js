@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./productshow.module.css";
-import opal1 from "../assets/plice1.jpg";
-import opal2 from "../assets/home1.jpg";
+import opal1 from "../assets/s1.jpg";
+import opal2 from "../assets/min.jpg";
 import opal3 from "../assets/service.jpg";
-import opal4 from "../assets/news.jpg";
-import opal5 from '../assets/contact.jpg';
+import opal4 from "../assets/c5.jpg";
+import opal5 from '../assets/b1.jpg';
 import './about.css'
 
 import { NavLink } from "react-router-dom";

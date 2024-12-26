@@ -18,13 +18,18 @@ import eve from '../assets/eve.jpg'
 import event from '../assets/event.jpg'
 import cctvv from '../assets/cctvv.jpg'
 import mine from '../assets/mining.jpg'
-import g1 from '../assets/sguard.png'
+import g1 from '../assets/sguard.jpg'
 import g2 from '../assets/Sserv.png'
 import g3 from '../assets/straining.jpg'
 import g4 from '../assets/patroll.jpg'
-import clean from '../assets/ssss.jpg'
+import clean from '../assets/clll.jpg'
 import vp from '../assets/vipp.jpg'
+
+import hos1 from '../assets/ss1.jpg'
+import hos2 from '../assets/ss2.jpg'
+
 import axios from 'axios';
+import { Image } from 'antd';
 
 
 function Provide() {
@@ -32,8 +37,8 @@ function Provide() {
     const services = [
         {
             id: 1,
-            image: service1,
-            title: "Guard",
+            image: service3,
+            title: "Guard Security",
             content: 'Static',
             description: {
                 title: "Guard Services",
@@ -81,7 +86,7 @@ function Provide() {
         {
             id: 3,
             image: min,
-            title: "Mining Security",
+            title: "Bank Security",
             content: 'Security',
             link: '/provide/3',
             description: {
@@ -191,6 +196,30 @@ function Provide() {
         },
         {
             id: 8,
+            image: hos1,
+            title: "Hospital Security",
+            link: '/provide/8',
+            content: 'security',
+            description: {
+                title: "Cleaning Services",
+                brif: 'Tailored cleaning schedules based on client needs, whether for regular maintenance or one-time deep cleaning. Our Cleaning Services aim to create clean, safe, and inviting environments, enhancing overall well-being and productivity',
+                image: hos2,
+                features: [
+                    'Professional cleaning services to maintain a safe environment.',
+                    'Regular and deep cleaning tailored to your needs.',
+                    'Use of eco-friendly products and methods.',
+                    'deep cleaning, carpet cleaning, window washing, and more',
+                    'Options for daily, weekly, or monthly services '
+                ],
+                contactInformation: {
+                    desc: 'Our Cleaning Service delivers professional and comprehensive cleaning solutions tailored to meet the needs of residential, commercial, and industrial clients. With a commitment to quality and customer satisfaction, we ensure that your spaces are clean, safe, and inviting.',
+                    phone: '+251-913-152-743',
+                    email: 'cleaning@example.com'
+                }
+            }
+        },
+        {
+            id: 9,
             image: cl,
             title: "Cleaning Services",
             link: '/provide/8',
@@ -274,7 +303,8 @@ function Provide() {
                             {services.filter(d=>selectedService===d.id).map((d)=>
                                 <div key={d.id}>
                                     <div className='upper-ppp'>
-                                        <img src={d.image} alt={d.title} />
+                                        <img src={d.image} alt={d.title} 
+                                        />
                                     </div>
 
                                     <div className='lower-ppp'>
@@ -289,7 +319,8 @@ function Provide() {
                                                     ))}
                                                 </ul>
                                             </div>
-                                            <img src={d.description.image} alt={d.description.title} />
+                                            <Image src={d.description.image} alt={d.description.title} 
+                                            style={{width:350, height:400 }}/>
                                         </div>
                                         <h2>Contact Us</h2>
                                         <p>{d.description.contactInformation.desc}</p>

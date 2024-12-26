@@ -578,6 +578,20 @@ button:hover {
    width: 200px;
 }
 
+.middle-v-r{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.middle-v-r p{
+    color: rgba(0, 128, 0, 0.7);
+    font-weight: bold;
+
+}
+.vision-reality h3{
+       color: rgba(0, 128, 0, 0.7);
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     .vision-reality {
@@ -604,10 +618,15 @@ button:hover {
     .middle p {
         font-size: 1rem; 
     }
+    
 }
 
 @media (max-width: 480px) {
     .vision-reality {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: auto;
         padding: 15px; 
     }
@@ -617,14 +636,22 @@ button:hover {
 
     .vision-reality p {
         font-size: 0.9rem; 
+        width: 450px;
     }
 
     button {
         padding: 10px 20px;
     }
+    .middle-v-r p{
+        color: black;
+    }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .vision-reality {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: auto;
         padding: 15px; 
     }
@@ -634,6 +661,7 @@ button:hover {
 
     .vision-reality p {
         font-size: 0.9rem; 
+        width: 350px;
     }
 
     button {
@@ -653,6 +681,10 @@ button:hover {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .vision-reality {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: auto;
         padding: 15px; 
     }
@@ -670,6 +702,10 @@ button:hover {
 }
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
     .vision-reality {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: auto;
         padding: 15px; 
     }
@@ -683,6 +719,12 @@ button:hover {
 
     button {
         padding: 10px 20px;
+    }
+    .upper.v-r{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -737,15 +779,11 @@ button:hover {
     }
     
 }
-/* .vision-reality{
-   animation: motive 5s linear;
-   animation-timeline:view();
-   animation-range: entry 0% ;
-} */
+
 @keyframes motive {
     from{
        opacity:0;
-       scale:0.2 ;
+       scale:0.2;
     }
     to{
        opacity: 1;
@@ -803,9 +841,7 @@ button:hover {
     opacity: 0.5;
     color: black;
 }
-/* .mdd1 button{
-    width: 200px;
-} */
+
 @keyframes motive {
     from{
        opacity:0;

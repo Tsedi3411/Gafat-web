@@ -1,9 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import pic1 from '../assets/cS.jpg';
-import pic2 from '../assets/forOp.jpg';
-import pic3 from '../assets/service.jpg';
-import pic4 from '../assets/ssss.jpg';
+import pic1 from '../assets/s1.jpg';
+import pic2 from '../assets/n1.jpg';
+import pic3 from '../assets/b1.jpg';
+import pic4 from '../assets/ss2.jpg';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -29,7 +29,7 @@ export default function MySwiper() {
             loop={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
-            style={{ height: '600px' }} 
+            style={{ height: '650px' }} 
         >
             {[
                 {

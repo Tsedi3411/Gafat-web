@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import './about.css'
 import { TbBuildingCottage } from "react-icons/tb";
 import { FaFacebook, FaTelegramPlane, FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import emp11 from '../assets/s1.jpg'
 import employee from '../assets/empP.jpg'
-
 import { NavLink, useParams } from 'react-router-dom'
 import { FaPeopleRoof } from "react-icons/fa6";
 import { IoIosPeople } from "react-icons/io";
@@ -11,11 +11,11 @@ import { FaGlobe } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
 
 import './home.css'
-import history from '../assets/abtu.jpg'
+import history from '../assets/c5.jpg';
 import Chatbot from './Chatbot';
-import MySwiper from './Swip';
 import { Image } from 'antd';
 import Pimages from './Pimages';
+import SwipeAbout from './SwipeAbout';
 
 function About() {
   const images = [
@@ -31,7 +31,7 @@ function About() {
 
   return (
     <>
-      <MySwiper />
+      <SwipeAbout />
       <div className='history'>
         <h1>About Us </h1>
         <div className='adHis'>
@@ -123,9 +123,9 @@ function About() {
         <div className='emp-one'>
           <div className='emp-two' >
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
+              <Image src={emp11} alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
-                <h2>Coroniel Abebe</h2>
+              <h2>Meto Aleka Araga Belihu</h2>
                 <p>Founder & G/Manager
                   20 Years experice in ... and</p>
                 <div className='emp-icons'>
@@ -137,10 +137,10 @@ function About() {
               </div>
             </div>
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
+              <Image  alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
-                <h2>Coroniel Alemu</h2>
-                <p>Founder & G/Manager
+                <h2>Ato Abebe Alemu </h2>
+                <p>Founder 
                   20 Years experice in ... and</p>
                 <div className='emp-icons'>
                   <NavLink to='Facebook.com' ><FaFacebook size={20} color="#3b5998" /></NavLink>
@@ -153,10 +153,10 @@ function About() {
           </div>
           <div className='emp-two'>
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
+              <Image  alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
-                <h2>Coroniel Ezra</h2>
-                <p>Founder & G/Manager
+                <h2>Ato Ezra Bekele</h2> 
+                <p>Founder 
                   20 Years experice in ... and</p>
                 <div className='emp-icons'>
                   <NavLink to='Facebook.com' ><FaFacebook size={20} color="#3b5998" /></NavLink>
@@ -167,10 +167,10 @@ function About() {
               </div>
             </div>
             <div className='emp-pics'>
-              <Image src={employee} alt='general manager' style={{ height: 250, width: 200 }} />
+              <Image  alt='general manager' style={{ height: 250, width: 200 }} />
               <div className='emp-info'>
-                <h2>Coroniel kebede</h2>
-                <p>Founder & G/Manager
+                <h2> kebede </h2>
+                <p>Founder
                   20 Years experice in ... and</p>
                 <div className='emp-icons'>
                   <NavLink to='Facebook.com' ><FaFacebook size={20} color="#3b5998" /></NavLink>
