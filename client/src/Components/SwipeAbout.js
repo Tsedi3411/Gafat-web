@@ -12,7 +12,25 @@ import 'swiper/css/navigation';
 import './swipe.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+
 export default function SwipeAbout() {
+    // const [slides, setSlides] = useState([]);
+
+    // useEffect(() => {
+    //     const fetchSlides = async () => {
+    //         try {
+    //             const response = await axios.get('YOUR_API_ENDPOINT'); // Replace with your API endpoint
+    //             setSlides(response.data); // Assuming the response is an array of slide objects
+    //         } catch (error) {
+    //             console.error("Error fetching slides:", error);
+    //         }
+    //     };
+
+    //     fetchSlides();
+    // }, []);
+
     return (
         <Swiper
             spaceBetween={30}
@@ -31,6 +49,7 @@ export default function SwipeAbout() {
             className="mySwiper"
             style={{ height: '600px' }} 
         >
+          {/* slides */}
             {[
                 {
                     img: pic1,

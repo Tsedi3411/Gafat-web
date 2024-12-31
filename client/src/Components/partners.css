@@ -139,7 +139,7 @@
     border-radius: 10px; 
 }
 .selected-image img {
-    width: 90%; 
+    width: 100%; 
     height: auto; 
     max-height: 100%; 
     object-fit: contain; 
